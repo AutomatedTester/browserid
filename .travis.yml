@@ -3,8 +3,17 @@ language: node_js
 before_install:
  - sudo apt-get install libgmp3-dev
 
+mysql:
+  adapter: mysql2
+  username: browserid
+  encoding: utf8
+
 node_js:
  - 0.6
+
+env:
+ - DB=mysql
+
 
 notifications:
   irc: "irc.mozilla.org#identity"
