@@ -6,15 +6,13 @@ before_install:
 
 mysql:
   adapter: mysql2
-  username: browserid
   encoding: utf8
 
 node_js:
  - 0.6
 
 env:
- - DB=mysql
-
+ - DB=mysql NODE_ENV=test_mysql
 
 notifications:
   irc: "irc.mozilla.org#identity"
