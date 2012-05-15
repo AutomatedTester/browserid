@@ -1,365 +1,305 @@
-var json_locale_data = {
-   "client" : {
-      "Cancelling User Account" : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " eo",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "client": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-02-06 16:51+0200",
+         "Last-Translator": " Eduardo <eduardo@esperanto.org.uy>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " eo",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "Always sign in using this email" : [
+      "BrowserID requires cookies": [
          null,
-         ""
-      ],
-      "Sync Keys for Address" : [
-         null,
-         ""
-      ],
-      "Syncing Email Addresses" : [
-         null,
-         ""
-      ],
-      "Unfortunately, BrowserID cannot communicate while offline!" : [
-         null,
-         ""
-      ],
-      "Sign in using" : [
-         null,
-         ""
-      ],
-      "Relay frame could not be found" : [
-         null,
-         ""
-      ],
-      "Password" : [
-         null,
-         ""
-      ],
-      "We sent a confirmation email to <strong>%s</strong>" : [
-         null,
-         ""
-      ],
-      "To finish signing in just click the verify link we sent to your email address." : [
-         null,
-         ""
-      ],
-      "Cancel" : [
-         null,
-         ""
-      ],
-      "To verify that you own <strong id='primary_email'>%s</strong>, you must sign in with your provider.  This window will be redirected to" : [
-         null,
-         ""
-      ],
-      "Authenticating with Assertion" : [
-         null,
-         ""
-      ],
-      "Reset Password" : [
-         null,
-         ""
+         "Ni bedaŭras, BrowserID postulas kuketojn"
       ],
-      "Resetting Password" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
          ""
       ],
-      "Logout Failed" : [
+      "Communication Error": [
          null,
          ""
       ],
-      "Checking Email Address" : [
+      "Finishing Sign In...": [
          null,
          ""
       ],
-      "To verify that you own this address, you must sign in with your provider.  This window will be redirected to" : [
+      "In just a moment you'll be signed into BrowserID.": [
          null,
          ""
       ],
-      "This is not me..." : [
+      "Please wait a few seconds while we sign you into the site.": [
          null,
          ""
       ],
-      "We are sorry, BrowserID requires cookies" : [
+      "We are sorry, this request is taking a LOOONG time.": [
          null,
          ""
       ],
-      "In just a moment you'll be signed into BrowserID." : [
+      "This message will go away when the request completes (hopefully soon). If you wait too long, close this window and try again.": [
          null,
          ""
       ],
-      "Getting Assertion" : [
+      "Sign in using": [
          null,
-         ""
-      ],
-      "Completing User Registration" : [
-         null,
-         ""
+         "Sin anonci per"
       ],
-      "Registration Failed" : [
+      "New email address": [
          null,
          ""
       ],
-      "This message will go away when the request completes (hopefully soon).  If you wait too long, close this window and try again." : [
+      "This field must be an email address.": [
          null,
-         ""
-      ],
-      "translated text" : [
-         null,
-         ""
+         "Tiu teksto devas esti retpoŝta adreso."
       ],
-      "The email field is required." : [
+      "The email field is required.": [
          null,
-         ""
+         "La teksto \"Retpoŝta adreso\" estas deviga."
       ],
-      "New email address" : [
+      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again.": [
          null,
          ""
       ],
-      "verify email" : [
+      "That address is already added to your account!": [
          null,
          ""
       ],
-      "Checking if Cookies are Enabled" : [
+      "add": [
          null,
          ""
       ],
-      "Provisioning Unsupported Identity Provider" : [
+      "cancel": [
          null,
          ""
       ],
-      "That address is already added to your account!" : [
+      "Email": [
          null,
-         ""
+         "Retpoŝta adreso"
       ],
-      "Authenticating with Identity Provider" : [
+      "Enter your email address to sign in to <strong>%s</strong>": [
          null,
-         ""
+         "Bonvolu tajpi vian retpoŝtadreson por anonci vin al <strong>%s</strong>"
       ],
-      "Remove Email Address from Account" : [
+      "Welcome to BrowserID!": [
          null,
-         ""
+         "Bonvenon al BrowserID!"
       ],
-      "Communication Error" : [
+      "This email looks new, so let's get you set up.": [
          null,
          ""
       ],
-      "Provisioning with Identity Provider" : [
+      "Password": [
          null,
-         ""
+         "Pasvorto"
       ],
-      "Adding Address" : [
+      "forgot your password?": [
          null,
-         ""
+         "ĉu vi forgesis vian pasvorton?"
       ],
-      "Check your email!" : [
+      "The password field is required.": [
          null,
          ""
       ],
-      "The site requested you sign in using" : [
+      "The account cannot be logged in with this username and password.": [
          null,
          ""
       ],
-      "Syncing Address" : [
+      "By clicking %s, you confirm that you accept this site's <a %s>Terms of Use</a> and <a %s>Privacy Policy</a>.": [
          null,
          ""
       ],
-      "Use a different email" : [
+      "next": [
          null,
          ""
       ],
-      "next" : [
+      "verify email": [
          null,
          ""
       ],
-      "Verifying email address" : [
+      "sign in": [
          null,
          ""
       ],
-      "Signup Failed" : [
+      "Cannot verify %s": [
          null,
          ""
       ],
-      "This email looks new, so let&apos;s get you set up." : [
+      "%s is a required address, but we cannot verify that you own this address.": [
          null,
          ""
       ],
-      "Checking Script Version" : [
+      "Check your email!": [
          null,
-         ""
+         "Kontrolu vian retpoŝton!"
       ],
-      "You are offline!" : [
+      "We sent a confirmation email to <strong>%s</strong>": [
          null,
-         ""
+         "Ni sendis konfirman retmesaĝon al <strong>%s</strong>"
       ],
-      "Unfortunately, the email address provided cannot act as a Primary Identity Provider" : [
+      "To finish signing in just click the verify link we sent to your email address.": [
          null,
-         ""
+         "Por fini, alklaku la ligilon kiu troviĝas en la retmesaĝo kiun ni sendis."
       ],
-      "Checking Authentication" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"cancel\">cancel</a>.": [
          null,
          ""
       ],
-      "Getting Token Info" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"back\">use another email address</a>.": [
          null,
          ""
       ],
-      "forgot your password?" : [
+      "We are very sorry, the server is under extreme load!": [
          null,
          ""
       ],
-      "Address Verified!" : [
+      "We are very sorry, there has been an error!": [
          null,
          ""
       ],
-      "This field must be an email address." : [
+      "Please reload the page and try again.": [
          null,
          ""
       ],
-      "We are sorry, but we cannot communicate with BrowserID while you are offline." : [
+      "Please close this window and try again.": [
          null,
          ""
       ],
-      "Authenticating User" : [
+      "See more info": [
          null,
          ""
       ],
-      "This email looks new, so let&#39;s get you set up." : [
+      "The site requested you sign in using": [
          null,
          ""
       ],
-      "Email" : [
+      "reset password": [
          null,
-         ""
+         "Pasvorto"
       ],
-      "Setting Password" : [
+      "*%s* is not a valid email address!": [
          null,
          ""
       ],
-      "Finishing Sign In..." : [
+      "To continue, please close the window and enter a valid address.": [
          null,
          ""
       ],
-      "select email" : [
+      "This is not me...": [
          null,
          ""
       ],
-      "Checking Address Info" : [
+      "Use a different email": [
          null,
          ""
       ],
-      "Adding Primary Email Address to User" : [
+      "Always sign in using this email": [
          null,
          ""
       ],
-      "Your identity has been verified with your email provider, we will now try to sign you in." : [
+      "Address Verified!": [
          null,
          ""
       ],
-      "Verify With Email Provider" : [
+      "Your identity has been verified with your email provider, we will now try to sign you in.": [
          null,
          ""
       ],
-      "Checking Whether User is Authenticated with IdP" : [
+      "You must sign in with your email provider to verify ownership of this address. This window will be redirected to": [
          null,
          ""
       ],
-      "Updating password" : [
+      "verify": [
          null,
          ""
       ],
-      "We just sent an email to that address!  If you really want to send another, wait a minute or two and try again." : [
+      "Verify With Email Provider": [
          null,
          ""
       ],
-      "The password field is required." : [
+      "#~ \"BrowserID requires your browser's cookies to be enabled to operate. \"#~ \"Please enable your browser's cookies and try again\"": [
          null,
-         ""
+         "#~ \"BrowserID postulas ke kuketoj estu aktivaj en via retesplorilo. Bonvolu \"#~ \"aktivigi la kuketojn kaj klopodi denove.\""
       ],
-      "cancel" : [
+      "You are offline!": [
          null,
-         ""
+         "Vi ne estas konektita!"
       ],
-      "We had trouble communicating with your email provider, please try again!" : [
+      "Unfortunately, BrowserID cannot communicate while offline!": [
          null,
-         ""
+         "Bedaŭrinde BrowserID ne povas komunikiĝi se vi ne estas konektita!"
       ],
-      "Creating Account" : [
+      "Adding Address": [
          null,
-         ""
+         "Aldonado de adreso"
       ],
-      "We are sorry, this request is taking a LOOONG time." : [
+      "Adding Primary Email Address to User": [
          null,
-         ""
+         "Aldonado de ĉefa adreso de la uzanto"
       ],
-      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again." : [
+      "Checking Address Info": [
          null,
-         ""
+         "Kontrolado de la informo de la adreso"
       ],
-      "BrowserID requires your browser's cookies to be enabled to operate.  Please enable your browser's cookies and try again" : [
+      "Authenticating with Assertion": [
          null,
-         ""
+         "Aŭtentikigado kun aserto"
       ],
-      "Checking Registration Token" : [
+      "Cancelling User Account": [
          null,
-         ""
+         "Nuligado de la konto de uzanto"
       ],
-      "add" : [
+      "Checking Authentication": [
          null,
-         ""
+         "Kontrolado de aŭtentikigado"
       ],
-      "To continue, please close the window and enter a valid address." : [
+      "Checking Script Version": [
          null,
-         ""
+         "Kontrolado de la versio de skripto"
       ],
-      "Enter your email address to sign in to <strong>%s</strong>" : [
+      "Completing User Registration": [
          null,
-         ""
+         "Finado de la registrado de uzanto"
       ],
-      "Establishing Relay" : [
+      "Checking if Cookies are Enabled": [
          null,
-         ""
+         "Kontrolado de la aktiveco de kuketoj"
       ],
-      "Signin Failed" : [
+      "Creating Account": [
          null,
-         ""
+         "Kreado de konto"
       ],
-      "Verify" : [
+      "Getting Assertion": [
          null,
-         ""
+         "Akirado de aserto"
       ],
-      "sign in" : [
+      "Checking Registration Token": [
          null,
-         ""
+         "Kontrolado de la registra ĵetono"
       ],
-      "The account cannot be logged in with this username and password." : [
+      "Checking Email Address": [
          null,
-         ""
+         "Kontrolado de la retpoŝta adreso"
       ],
-      "Welcome to BrowserID!" : [
+      "Checking Whether User is Authenticated with IdP": [
          null,
-         ""
+         "Ĉu la uzanto estis aŭtentikigita de IdP?"
       ],
-      "If this is a mistake, just ignore the sent email and <a href=\"#\" class=\"cancelVerify\" id=\"back\">use another email address</a>." : [
+      "Logout Failed": [
          null,
-         ""
+         "Malkonektiĝo malsukcesa"
       ],
-      "*%s* is not a valid email address!" : [
+      "Authenticating with Identity Provider": [
          null,
-         ""
+         "Aŭtentikigado kun provizanto de idento"
       ],
-      "Please wait a few seconds while we sign you into the site." : [
+      "#~ \"We had trouble communicating with your email provider, please try again!\"": [
          null,
-         ""
+         "#~ \"Ni havis problemojn komunikajn kun via retpoŝtprovizanto, bonvolu klopodi \"#~ \"denove!\""
       ]
    }
 }

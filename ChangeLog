@@ -1,9 +1,121 @@
-train-2012.02.29 (in progress):
+train-2012.05.25 (in progress):
+  *
+
+train-2012.05.14:
+  * Password is now requested in dialog for new user signup: #1000, #290
+  * "Key Performance Indicator" system implemented, to be disabled pending review: #1546, #1567
+  * Improve error handling: #1227, #1495
+  * code and test cleanup: #1521, #1547
+  * ToS and privacy policy display regardless of cookie settings: #1514
+  * Integrated new version of jwcrypto: #1543, #1544, #1545, #1552, #1574, #1575
+  * Android 4.0 cookie fixes: #1542
+  * Proper error display in IE6 & IE7: #1529
+  * Allow mysql password to be specified in environment: #1560
+  * Fix occasional dropped click during sign-in on chrome: #1581
+
+train-2012.04.27:
+  * Observer API updated, still experimental.
+  * A more responsive dialog design that scales to different screen sizes: #1101, #1317
+  * Improved consistency of links: #702, #1453
+  * Test improvements: #1246, #1437, #1488, #1464
+  * Allow underscores in email address domain and site origin: #1454
+  * Fixes to per site last-used-email state maintenence: #968
+  * Never ask a user if this "is your computer" in a session that involves email verificatino: #1446
+  * Remove placeholder text from change password inputs: #1461
+  * General cleanup: #1449, #1396
+  * Logging improvements: #1383
+  * IE visual improvements for error screens: #1485, #1390, #1496
+  * Improved checks for disabled cookies: #1418, #1484
+  * Fix bug where if user pauses for 2 minutes on "is this your computer" the generated assertion is invalid: #1460
+  * (hotfix 2012.05.07) upgrade to node.js 0.6.17 to mitigate risk of HTTP parser bugs - bug #752605
+  * (hotfix 2012.05.08) handle syntax errors in declaration of support better. bug #752721
+
+train-2012.04.11:
+  * New BrowserID "Observer" API implemented in experimental status: #912
+  * Implement variable length sessions and explicit user confirmation to improve saftey on public terminals/shared computers: #884
+  * keysize is now 1024: #1293
+  * fix case where removing the same email address twice could cancel your account: #1123
+  * give user feedback after typing in email while we're checking the email provider for BrowserID support: #1290
+  * optimize javascript resources: #1351
+  * frontend tests only output failures: #1326
+  * documentation fixes: #1367, #1401
+  * logging improvements: #1327
+  * improve experience for users with cookies disabled: #1402, #1201, #1202, #1414
+  * use http status codes in verifier where appropriate: #1362
+  * improve password update in account manager screen: #1388, #1389
+  * developers link now points to MDN: #1397
+  * fix issues that were introduced while implementing the above features: #1349, #1348, #1354, #1357, #1374, #1399, #1400, #1408, #1395, #1406, #1405, #1390, #1391
+  * (hotfix 2012.04.12) return 400 rather than 500 for invalid params to stage_user or stage_email: #1429
+  * (hotfix 2012.04.12) fix broken string, "is this your computer" was broken into two fragments: #1425
+  * (hotfix 2012.04.16) fix API regression that would cause javascript error when .get() invoked without second arg: #1442
+  * (hotfix 2012.04.16) update load_gen to new server apis that require an `ephemeral` argument: #1436
+  * (hotfix 2012.04.17) fix broken reset password flow - button was non-responsive in dialog: #1440
+  * (hotfix 2012.04.17) mitigate errors seen when adding a secondary email to an acct with only primary emails: #1445
+  * (hotfix 2012.04.18) fix error where under certain conditions user could see an error immediately after authenticating: #1449
+
+train-2012.03.28:
+  * work towards better user messaging for when cookies are disabled: #1167, #1302
+  * improved cache headers: #1331, #620
+  * error handling fix in frontend code: #1339
+  * new API: /wsapi/ping - used for server monitoring: #1324
+  * support email providers (with BrowserID support) with digits in their hostnames: #1284
+  * tools/build/dev env fixes: #1284
+  * (hotfix 2012.03.30) Fix regression where 304 responses to requests for IFrame HTML would have X-Frame-Options: deny, preventing loading of iframes #1353
+  * (hotfix 2012.03.30) ETag headers now vary by locale, fixes regression where switching between locales was broken #1364
+  * (hotfix 2012.04.10) more rigorous checking of email inputs to WSAPI
+  * (hotfix 2012.04.10) copy config/l10n-*.json to build directory
+  * (hotfix 2012.04.10) final 40 production locales merged: #1412
+  * (hotfix 2012.04.10) update l10n-all.json to have all locales (complete and in-progress) as well as en-US and db-LB
+  * (hotfix 2012.04.10) fix more rigorous checking of email inputs to WSAPI: domain checking of 'site' parameter was validating hostnames rather than domains.
+  * (hotfix 2012.04.12) fix /signup page on browserid.org: #1429
+
+train-2012.03.14:
+  * BrowserID now speaks Bulgarian
+  * Fix regressions related to ToS/PP feature (#841): #1303
+  * Fix regressions related to improved email selection on iOS (#1133): #1304
+  * "delegation of authority" implemented: #1271, #864
+  * visual improvements: #403
+  * improved algorithm for finding best language for a given user: #1128
+  * frontend tests now run on every commit under travis-ci: #635
+  * improve the way that .well-known/browserid is cached: #1205
+  * l10n fixes: #1124, #1300
+  * tools/build/dev env cleanup: #1235, #1234, #1257, #1245, #1055
+  * improvements to developer tool for checking primary support - scripts/checks_primary_support
+  * documentation improvements: #1264, #1287, #1288
+  * logging improvements: #1254, #1255, #1283, #1291
+  * (hotfix 03.23) re-add bulgarian: #1312
+  * (hotfix 03.23) add a ping wsapi to give monitoring probes a target that will test db connectivity: #1324
+  * (hotfix 03.23) ensure ETag on sign-in is changed: #1331
+
+train-2012.03.01:
+  * When the user authenticates log them in automatically without going to the email picker: #198
+  * database (mysql) improvements, handle temporary outages without taking down the server: #990, #1211
+  * improved error flows when cookies are disabled: #835
+  * travis-ci support: #1166, #1197 - http://travis-ci.org/#!/mozilla/browserid
+  * clicking label in picker in iOS toggles radio button: #1133, #1137
+  * dialog zooming and scrolling fixed: #423
+  * Mobile firefox fixes: #1176
+  * websites can now provide a ToS and PP for display in-dialog: #841
+  * caching improvements: #1143, #1141
+  * fix webhead crash when keysigner is unreachable: #1011
+  * fix to allow viewing of error details on browserid.org: #1139
+  * disable unit tests in production in the application: #1044
+  * fix cases where 'keep me signed in' can disappear: #871
+  * fix cases where 'keep me signed in' can't be unchecked: #1155
+  * more password length checking in more places: #1173
+  * rewrite compression scripts in nodejs, improve performance: #660, #1009
+  * cosmetic and language fixes: #1105, #1154, #1160, #1178, #1179, #1184, #1185, #1189, #1209
+  * documentation fixes: #1043
+  * code cleanup: #1108, #1147, #1157, #1188
+  * test cleanup: #1156
+  * rpm fixes: #1165, #1177
+  * devtool fixes: #1219
+  * fix string extraction: #1170, #1194
 
 train-2012.02.16:
   * improve failure mode when cookies are disabled (especially on iOS): #1056
-  * serve static css/js resources from perma URLs to improve load times - #620
-  * improve UI flows concerning cancelation during primary sign in: #983 #1036
+  * serve static css/js resources from perma URLs to improve load times: #620
+  * improve UI flows concerning cancelation during primary sign in: #983, #1036
   * localization improvements: #1040, #1045, #1048, #1062, #1081, #1113
   * cosmetic dialog fixes: #1062, #1058, #892, #1117
   * fix bug preventing email addresses with under-bars in hostnames: #1074
@@ -36,25 +148,26 @@ train-2012.02.02:
   * secondary "cancel" style buttons have a smaller font: #1020
   * build fixes: #1021, #1024
   * (hotfix 2012.02.07) add a l10n-all.json which holds all locales we'll be shipping to production
-  * (hotfix 2012.02.07) Fix the missing email address in the "check your email" screen for the forgot password flow.  #1058
+  * (hotfix 2012.02.07) Fix the missing email address in the "check your email" screen for the forgot password flow: #1058
   * (hotfix 2012.02.07) Modify build process to pick up locales from a .json file
   * (hotfix 2012.02.07) fix production-locales.sh script to defer to the environment for configuration
   * (hotfix 2012.02.13) fix for IE users not seeing error screens sometimes: #1087
+  * (hotfix 2012.02.22) add banner announcing brand change
 
 train-2012.01.18:
   * support for 3rd party primary identity providers: #761, #904, #865
   * loadgen improvements
-  * Re-license under MPL2: #859 (& #827)
+  * Re-license under MPL2: #859, #827
   * clean up unused developer tools (vagrant): #861
   * (primary support) declaration of support now hosted in .well-known/browserid (was 'vep'): #865
-  * unit test fixes: #889 & #851
+  * unit test fixes: #889, #851
   * help link opens in new window: #728
   * fix 'not supported' display in IE7: #831
   * language/rendering refinements: #850, #439, #622, #818, #901, #630, #888, #345, #815
   * front end performance improvements: #899, #910
   * better UX for network timeouts: #905
-  * (hotfix 2012.01.23) Remove unwanted scrollbar in dialog: issue #947
-  * (hotfix 2012.01.23) Fix black backgrounds on IE8: issue #929
+  * (hotfix 2012.01.23) Remove unwanted scrollbar in dialog: #947
+  * (hotfix 2012.01.23) Fix black backgrounds on IE8: #929
   * (hotfix 2012.01.23) fix broken transition to "check your email": #933, #934, #935
   * (hotfix 2012.01.24) Fix "slow script" error on IE8 during keygen on behalf of primary: #956
   * (hotfix 2012.01.24) Publish javascript API to provide a native-support compatible for primaries' auth pages: #909
@@ -90,36 +203,36 @@ train-2011.12.28:
   * bcrypt now runs out of process, uses all available cores, allows for app level 503 under extreme load: #694
   * Fix "cancel" in the forgot password screen when accessed via required email: #754
   * first time a user visits browserid.org, show a "learn more" message: #384
-  * partial code versioning/cache busting implementation: #226 #687
+  * partial code versioning/cache busting implementation: #226, #687
   * improved build process - resource minification no longer leaves artifacts all over: #700
-  * clean up whitespace.  meh.  #758
+  * clean up whitespace.  meh.  : #758
   * emails now come from "BrowserID@" instead of "noreply@": #756
-  * completely new implementation for cross domain window communication (https://github.com/lloyd/winchan) #764 #766
+  * completely new implementation for cross domain window communication (https://github.com/lloyd/winchan): #764, #766
   * allow canceling of "use a different email: #765
   * improve language and UX of required email flow: #608
   * better, earlier dev errors for required email: #632
   * new assertion format (smaller by 66%) handled by verifier, to be generated by browserid next train: #507
-  * now you can change your password: #771 #114
+  * now you can change your password: #771, #114
   * load generator improvements: #782
-  * improved PRNG: #789 #735
-  * fix regressions in the above: #719 & #776
+  * improved PRNG: #789, #735
+  * fix regressions in the above: #719, #776
   * CSRF token uses better RNG: #800
 
 train-2011.12.08:
-  * improve performance of unit tests.  #686
-  * IE8 fixes.  #688
-  * logging improvements. #681
-  * loadgen fixes.  #682
-  * android fixes.  #704
-  * performance improvements. #680
-  * moar instrumentation.  #691
+  * improve performance of unit tests: #686
+  * IE8 fixes: #688
+  * logging improvements: #681
+  * loadgen fixes: #682
+  * android fixes: #704
+  * performance improvements: #680
+  * moar instrumentation: #691
 
 train-2011.12.01:
   * BrowserID now requires NodeJS >= 0.6.2
   * extensive work on load generation tool: #504
   * modularize front-end, remove deps on stealjs and JSMVC: #609, #625, #634
   * front-end refactoring: #578, #611, #608, #650, #654, #655
-  * regression fix: account consolidation possible without explicit canceling: #607 #612
+  * regression fix: account consolidation possible without explicit canceling: #607, #612
   * make it possible to gracefully update domain key at any time: #599
   * domain key now uses RSA-2048: #600
   * optimize (and combine) frontend resources (vepbundle): #606
@@ -128,9 +241,9 @@ train-2011.12.01:
   * IE8 fixes: #615
   * unit test fixes: #557 (revisited), #629, #657
   * update_password WSAPI added: #560, #114
-  * verifier improvements and unit tests: #467, #598, #605, #643, #642, #645, #646, 
-  * node-mysql driver update - improved for prod env  #648
-  * include a link to support.mozilla.com off of browserid.org - #533
+  * verifier improvements and unit tests: #467, #598, #605, #643, #642, #645, #646
+  * node-mysql driver update - improved for prod env: #648
+  * include a link to support.mozilla.com off of browserid.org: #533
   * added command line tool to create and account: #603
   * added command line tool to bcrypt a password: #651
   * fix button heights in firefox on browserid.org: #658
@@ -155,11 +268,11 @@ train-2011.11.17:
   * simplify and consolidate user facing help links in dialog: #553
   * clean up user facing error messages (email throttling and sent email): #579, #577, #591
   * moved 'this is not me' and 'use a different email' links based on UX suggestions: #459
-  * incrementally work to repair load_gen (not yet complete) : #504
+  * incrementally work to repair load_gen (not yet complete): #504
   * unit test fixes: #504
   * remove extraneous console logging: #574
   * improve email validation in main site (whitespace handling): #583, #429
-  * fix serious regressions related to iOS5 fixes that prevented dialog from working the second time on RPs: #580, #588 #589
+  * fix serious regressions related to iOS5 fixes that prevented dialog from working the second time on RPs: #580, #588, #589
   * fix "go back and try another" link in dialog: #587
   * added "required email" feature: #491
   * (added 2011.11.18) fix regression - sporadic assertion verification failures: #616
@@ -198,16 +311,16 @@ train-2011.11.03:
   * remember the users email as they transition between screens, when appropriate: #476
   * Suppress iOS autocapitalizion and auto-correction for email addresses: #464
   * Improve front end email address validation: #513
-  * Improve repository organization: #503 & #488
-  * As part of above and in prep for #460 - all processes (browserid, verifier, etc) are now always run separately (never combined into the same express instance
+  * Improve repository organization: #503, #488
+  * As part of above and in prep for #460 - all processes (browserid, verifier, etc) are now always run separately (never combined into the same express instance)
   * Test improvements: #520, #530, #531
   * Fix undefined reference (crash) in verifier after verification failure: #523 (hot-fixed in production: https://github.com/mozilla/browserid/commit/ba3c53)
   * Remove UI that corresponds to unimplemented features: #519
   * Handle upper case letters in domain part of email addresses properly: #501
-  * Use a more conventional log format that includes time-stamps when logging to file.  closes #234
+  * Use a more conventional log format that includes time-stamps when logging to file: #234
   * Shutdown gracefully whenever possible, and always log why we go down: #529
   * 'LOG_TO_CONSOLE' env var for verbose console output during tests: #530
-  * more checks around '/code_update' URL invocation - for bug #699171
+  * more checks around '/code_update' URL invocation: bug #699171
   * Many minor bug-fixes: #497, #532
   * (2011.11.08) don't crash on mysql connection timeout: #540
 
@@ -292,16 +405,16 @@ train-2011.09.22:
   * IE9 support
   * partial IE8 support (not yet usable, several small remaining bugs, and abysmal performance)
   * development harness (./run.js) now respects an IP_ADDRESS env var to bind to a specific address (other than 127.0.0.1)
-  * improved first-time development experience:  `git clone && cd browserid && npm install && npm run`
-  * initial support for running locally under virtualbox via vagrant: issue #261 (thanks ozten!)
-  * (fix 2011.09.23) fix race condition between relay iframe and window introduced with IE9 support.  issue #287
-  * (fix 2011.09.23) fix blank popup on second signin invocation in same session in FFX:  issue #286
-  * (fix 2011.09.23) explicitly disable caching for /wsapi calls, prevents unwanted caching of CSRF and friends. issue #294
+  * improved first-time development experience: `git clone && cd browserid && npm install && npm run`
+  * initial support for running locally under virtualbox via vagrant: #261 (thanks ozten!)
+  * (fix 2011.09.23) fix race condition between relay iframe and window introduced with IE9 support: #287
+  * (fix 2011.09.23) fix blank popup on second signin invocation in same session in Firefox: #286
+  * (fix 2011.09.23) explicitly disable caching for /wsapi calls, prevents unwanted caching of CSRF and friends: #294
 
 train-2011.09.01:
   * /ws_api/set_key always returns returns value instead of HTTP 204 response: #219
   * update javascript mvc to 3.1.0.
-  * major interframe/window communication change using a hidden relay iframe to facilitate IE: #97(still open)
+  * major interframe/window communication change using a hidden relay iframe to facilitate IE: #97 (still open)
   * link colors on browserid.org are consistent: #227
 
 train-2011.08.25:
@@ -321,7 +434,7 @@ train-2011.08.25:
   * more than one email address can be added per dialog lifespan: #215
   * verifyier no longer verifies assertions issued by another server.
   * (2011.08.31) no error message displayed if you try to authenticate with an invalid u/p: #222
-	
+
 train-2011.08.18:
   * upon clickthrough of the email link, don't have the browser window close itself: #162
   * passwords must be between 8 and 80 chars: #155
@@ -331,30 +444,30 @@ train-2011.08.18:
   * forgotten password flow was broken with port to mysql, fixed: #170
   * improved metrics reporting abstraction: #168
   * moved all server logging into a single file: #169
-  * all files created at execution time are now in one location:  #172	
+  * all files created at execution time are now in one location: #172
   * developer ergonomics - improved colorized logging with terse webserver output to console
   * always require a user to authenticate if they don't have an active session: #74
   * improved CSRF protection to fix race conditions in previous train: #173
-		
+
 train-2011.08.12:
   * massive zero-user-visibile refactoring of dialog javascript.
-  * fix cancel button in "waiting for verification state" (issue #147)
-  * all browserid source is now tri-licensed (MPL1.1/GPL/LGPL). (issue #141)
-  * fixes for mobile firefox (fennec).  (issue #140)
-  * mysql support implemented for browserid (default persistence production) (issue #71)
+  * fix cancel button in "waiting for verification state": #147
+  * all browserid source is now tri-licensed (MPL1.1/GPL/LGPL): #141
+  * fixes for mobile firefox (fennec): #140
+  * mysql support implemented for browserid (default persistence production): #71
   * json persistence support added - a standalone dead simple persistence layer which is the default for local development and requires no external software.
-  * email secrets are now persisted in the database, so upon server restart outstanding verification links are no longer invalidated (issue #91)
+  * email secrets are now persisted in the database, so upon server restart outstanding verification links are no longer invalidated: #91
   * (website) styling changes - like fix issues where links on dev page were being displayed white on white.
-	
+
 train-2011.08.04:
-  * when user closes dialog without clicking "cancel", properly return 'null' to the webpage (via getVerifiedEmail callback) - issue #107
-  * improve checks to warn developer that prerequisite software is missing. issue #110
-  * parameterize software to support multiple deployment environments (dev/beta/prod) issues #102 & #52
+  * when user closes dialog without clicking "cancel", properly return 'null' to the webpage (via getVerifiedEmail callback): #107
+  * improve checks to warn developer that prerequisite software is missing: #110
+  * parameterize software to support multiple deployment environments (dev/beta/prod): #102, #52
   * documentation updates.
   * improved logging (using the winston logging framework for node.js)
   * [website] fixed inclusion of youtube video (now over https to keep browsers from getting scared about mixed mode resource inclusion)
 
 train-1:
   * beginning of time, everything is new.
-  * (2011.08.03) include youtube video embedding over https (issue #112)
-  * (2011.08.04) fix mozillalabs.com link in dialog (issue #116)
+  * (2011.08.03) include youtube video embedding over https: #112
+  * (2011.08.04) fix mozillalabs.com link in dialog: #116

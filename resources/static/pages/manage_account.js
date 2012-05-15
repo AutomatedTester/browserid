@@ -39,33 +39,37 @@ BrowserID.manageAccount = (function() {
   }
 
   function removeEmail(email, oncomplete) {
-    var emails = user.getStoredEmailKeypairs();
-
     function complete() {
       oncomplete && oncomplete();
     }
 
-    if (_.size(emails) > 1) {
-      if (confirmAction("Remove " + email + " from your BrowserID?")) {
-        user.removeEmail(email, function() {
-          displayStoredEmails(oncomplete);
-        }, pageHelpers.getFailure(errors.removeEmail, oncomplete));
+    user.syncEmails(function() {
+      var emails = user.getStoredEmailKeypairs();
+      if (!emails[email]) {
+        displayStoredEmails(oncomplete);
       }
-      else {
-        complete();
-      }
-    }
-    else {
-      if (confirmAction("Removing the last address will cancel your BrowserID account.\nAre you sure you want to continue?")) {
-        user.cancelUser(function() {
-          doc.location="/";
+      else if (_.size(emails) > 1) {
+        if (confirmAction("Remove " + email + " from your BrowserID?")) {
+          user.removeEmail(email, function() {
+            displayStoredEmails(oncomplete);
+          }, pageHelpers.getFailure(errors.removeEmail, oncomplete));
+        }
+        else {
           complete();
-        }, pageHelpers.getFailure(errors.cancelUser, oncomplete));
+        }
       }
       else {
-        complete();
+        if (confirmAction("Removing the last address will cancel your BrowserID account.\nAre you sure you want to continue?")) {
+          user.cancelUser(function() {
+            doc.location="/";
+            complete();
+          }, pageHelpers.getFailure(errors.cancelUser, oncomplete));
+        }
+        else {
+          complete();
+        }
       }
-    }
+    }, pageHelpers.getFailure(errors.syncEmails, oncomplete));
   }
 
   function displayEmails(emails) {
@@ -119,6 +123,8 @@ BrowserID.manageAccount = (function() {
       user.changePassword(oldPassword, newPassword, function(status) {
         if(status) {
           dom.removeClass("#edit_password", "edit");
+          dom.setInner("#old_password", "");
+          dom.setInner("#new_password", "");
         }
         else {
           tooltip.showTooltip("#tooltipInvalidPassword");
@@ -134,6 +140,10 @@ BrowserID.manageAccount = (function() {
     }
     else if(!newPassword) {
       tooltip.showTooltip("#tooltipNewRequired");
+      complete(false);
+    }
+    else if(newPassword === oldPassword) {
+      tooltip.showTooltip("#tooltipPasswordsSame");
       complete(false);
     }
     else if(newPassword.length < 8 || 80 < newPassword.length) {

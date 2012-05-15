@@ -1,181 +1,194 @@
-var json_locale_data = {
-   "messages" : {
-      "Error encountered trying to complete registration." : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " de",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "messages": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-03-02 17:15+0200",
+         "Last-Translator": " Michael <michael.koehler1@gmx.de>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " de",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "Plural-Forms": " nplurals=2; plural=(n != 1);",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "BrowserID" : [
+      "Complete Login to %s using BrowserID": [
          null,
-         ""
+         "Anmeldung bei %s mit BrowserID abschließen"
       ],
-      "Verification password is required." : [
+      "Error encountered while attempting to confirm your address. Have you previously verified this address?": [
          null,
-         ""
+         "Es ist ein Fehler aufgetreten beim Versuch Ihre Adresse zu bestätigen. Haben Sie Ihre Adresse zuvor bereits verifiziert?"
       ],
-      "Finish signing into: " : [
+      "Error encountered trying to complete registration.": [
          null,
-         ""
+         "Es ist ein Fehler aufgetreten beim Versuch die Registrierung abzuschließen."
       ],
-      "Your Email" : [
+      "Finish signing into:": [
          null,
-         ""
+         "Anmeldung wird abgeschlossen bei:"
       ],
-      "TOS" : [
+      "Email Verification": [
          null,
-         ""
+         "Verifizierung der E-Mail-Adresse"
       ],
-      "Need Help?" : [
+      "Email Address": [
          null,
-         ""
+         "E-Mail-Adresse"
       ],
-      "BrowserID: %s" : [
+      "Your Email": [
          null,
-         ""
+         "Ihre E-Mail-Adresse"
       ],
-      "Error comunicating with server." : [
+      "New Password": [
          null,
-         ""
+         "Neues Passwort"
       ],
-      "Last step!" : [
+      "Enter a Password": [
          null,
-         ""
+         "Geben Sie ein Passwort ein"
       ],
-      "BrowserID is the fast and secure way to sign in &mdash; <a target=\"_blank\" href=\"/about\">learn more</a>" : [
+      "Password is required.": [
          null,
-         ""
+         "Passwort ist erforderlich."
       ],
-      "Your new address is set up and you should now be signed in. You may now close this window and go back to" : [
+      "Password must be between 8 and 80 characters long.": [
          null,
-         ""
+         "Passwort muss zwischen 8 und 80 Zeichen lang sein."
       ],
-      "Verify Password" : [
+      "Verify Password": [
          null,
-         ""
+         "Passwort bestätigen"
       ],
-      "BrowserID Home" : [
+      "Repeat Password": [
          null,
-         ""
+         "Passwort wiederholen"
       ],
-      "Password must be between 8 and 80 characters long." : [
+      "Verification password is required.": [
          null,
-         ""
+         "Bestätigung des Passworts ist erforderlich."
       ],
-      "(A better way to sign in)" : [
+      "Passwords do not match.": [
          null,
-         ""
+         "Passwörter stimmen nicht überein."
       ],
-      "Finish registration by clicking this link:" : [
+      "finish": [
          null,
-         ""
+         "Abschließen"
       ],
-      "Thanks," : [
+      "<strong class=\"email\">Your address</strong> has been verified!": [
          null,
-         ""
+         "<strong class=\"email\">Ihre Adresse</strong> wurde verifiziert!"
       ],
-      "Developers" : [
+      "Your new address is set up and you should now be signed in. You may now close this window and go back to": [
          null,
-         ""
+         "Ihre neue Adresse wurde eingerichtet und Sie sollten jetzt angemeldet sein. Sie können dieses Fenster jetzt schließen und zurückkehren zu"
       ],
-      "Communicating with server" : [
+      "BrowserID requires cookies": [
          null,
-         ""
+         "BrowserID erfordert Cookies"
       ],
-      "Enter a Password" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
-         ""
+         "Bitte schließen Sie dieses Fenster, <a %s>aktivieren Sie Cookies</a> und versuchen Sie es erneut"
       ],
-      "Error encountered while attempting to confirm your address. Have you previously verified this address?" : [
+      "Communicating with server": [
          null,
-         ""
+         "Kommunikation mit dem Server"
       ],
-      "Thank you for signing up with <strong>BrowserID</strong>. You can now use your <strong>BrowserID</strong> account to <em>Sign In</em> or <em>Sign Up</em> to websites all across the web!" : [
+      "Just a moment while we talk with the server.": [
          null,
-         ""
+         "Einen Moment bitte, während wir mit dem Server sprechen."
       ],
-      "Email Verification" : [
+      "BrowserID": [
          null,
-         ""
+         "BrowserID"
       ],
-      "<strong class=\"email\">Your address</strong> has been verified!" : [
+      "BrowserID is the fast and secure way to sign in &mdash; <a %s>learn more</a>": [
          null,
-         ""
+         "BrowserID ist die schnelle und sichere Möglichkeit zur Anmeldung &mdash; <a %s>erfahren Sie mehr</a>"
       ],
-      "Sign In" : [
+      "BrowserID: %s": [
          null,
-         ""
+         "BrowserID: %s"
       ],
-      "Finish" : [
+      "BrowserID Home": [
          null,
-         ""
+         "Startseite von BrowserID"
       ],
-      "Browser ID" : [
+      "How it works": [
          null,
-         ""
+         "Wie es funktioniert"
       ],
-      "There was a problem with your signup link.  Has this address already been registered?" : [
+      "Developers": [
          null,
-         ""
+         "Entwickler"
       ],
-      "Passwords do not match." : [
+      "Sign In": [
          null,
-         ""
+         "Anmelden"
       ],
-      "Password is required." : [
+      "Sign Out": [
          null,
-         ""
+         "Abmelden"
       ],
-      "By the <a href=\"%s\" target=\"_blank\">Identity Team</a> @ <a href=\"%s\" target=\"_blank\">Mozilla Labs</a>" : [
+      "By the <a %s>Identity Team</a> @ <a %s>Mozilla Labs</a>": [
          null,
-         ""
+         "Vom <a %s>Identity Team</a> @ <a %s>Mozilla Labs</a>"
       ],
-      "New Password" : [
+      "Privacy": [
          null,
-         ""
+         "Datenschutz"
       ],
-      "Complete Login to %s using BrowserID" : [
+      "TOS": [
          null,
-         ""
+         "Nutzungsbedingungen"
       ],
-      "How it works" : [
+      "Need Help?": [
          null,
-         ""
+         "Benötigen Sie Hilfe?"
       ],
-      "Privacy" : [
+      "There was a problem with your signup link. Has this address already been registered?": [
          null,
-         ""
+         "Bei Ihrem Registrierungslink ist ein Fehler aufgetreten. Wurde diese Adresse bereits registriert?"
       ],
-      "Repeat Password" : [
+      "Error communicating with server.": [
          null,
-         ""
+         "Fehler bei Kommunikation mit dem Server."
       ],
-      "Just a moment while we talk with the server." : [
+      "Last step!": [
          null,
-         ""
+         "Letzter Schritt!"
       ],
-      "Email Address" : [
+      "Thank you for signing up with <strong>BrowserID</strong>. You can now use your <strong>BrowserID</strong> account to <em>Sign In</em> or <em>Sign Up</em> to websites all across the web!": [
          null,
-         ""
+         "Danke für Ihre Registrierung bei <strong>BrowserID</strong>. Sie können jetzt Ihr Konto bei <strong>BrowserID</strong> verwenden, um sich bei Websites im ganzen Internet <em>anzumelden</em> oder <em>zu registrieren</em>."
       ],
-      "Sign Out" : [
+      "Thanks for verifying your email address. This message is being sent to you to complete your sign-in to %s.": [
          null,
-         ""
+         "Danke für die Bestätigung Ihrer E-Mail-Adresse. Diese Nachricht wird Ihnen gesendet, um Ihre Anmeldung bei %s abzuschließen."
       ],
-      "If you are NOT trying to sign into this site, just ignore this email." : [
+      "Finish registration by clicking this link:": [
          null,
-         ""
+         "Schließen Sie die Registrierung durch Klick auf diesen Link ab:"
+      ],
+      "If you are NOT trying to sign into this site, just ignore this email.": [
+         null,
+         "Wenn Sie sich NICHT bei dieser Website anmelden möchten, ignorieren Sie einfach diese E-Mail."
+      ],
+      "Thanks,": [
+         null,
+         "Danke,"
+      ],
+      "(A better way to sign in)": [
+         null,
+         "(Eine bessere Möglichkeit zur Anmeldung)"
+      ],
+      "Browser ID": [
+         null,
+         "Browser-ID"
       ]
    }
 }

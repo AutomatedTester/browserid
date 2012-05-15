@@ -15,6 +15,7 @@
   "statsd": {
     "enabled": true
   },
+  "kpi_backend_sample_rate": 0.0,
   "bcrypt_work_factor": 12,
   "max_compute_processes": null,
   "max_compute_duration": 10,
@@ -33,7 +34,7 @@
   "debug_lang": "it-CH",
   // locale directory should be overridden
   "locale_directory": "/home/app/code/locale",
-  "express_log_format": "default",
+  "express_log_format": "default_bid",
   "email_to_console": false,
   // var path should be overridded
   // "var_path": "xxx",

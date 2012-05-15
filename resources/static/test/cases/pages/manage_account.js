@@ -68,7 +68,6 @@
 
     bid.manageAccount(mocks, function() {
       // switch to a single address return on the sync.
-      xhr.useResult("valid");
       bid.manageAccount.removeEmail("testuser@testuser.com", function() {
         equal($("#emailList").children().length, 1, "after removing an email, only one remains");
         start();
@@ -93,6 +92,25 @@
     bid.manageAccount(mocks, function() {
       bid.manageAccount.removeEmail("testuser@testuser.com", function() {
         equal(mocks.document.location, "/", "redirection happened");
+        start();
+      });
+    });
+  });
+  
+  asyncTest("removeEmail doesn't cancel the account when removing a non-existent e-mail", function() {
+    bid.manageAccount(mocks, function() {
+      bid.manageAccount.removeEmail("non@existent.com", function() {
+        notEqual(mocks.document.location, "/", "redirection did not happen");
+        start();
+      });
+    });
+  });
+  
+  asyncTest("removeEmail doesn't cancel the account when out of sync with the server", function() {
+    bid.manageAccount(mocks, function() {
+      xhr.useResult("multiple");
+      bid.manageAccount.removeEmail("testuser@testuser.com", function() {
+        notEqual(mocks.document.location, "/", "redirection did not happen");
         start();
       });
     });
@@ -227,6 +245,19 @@
     });
   });
 
+  asyncTest("changePassword with same old and new password - tooltip", function() {
+    bid.manageAccount(mocks, function() {
+      $("#old_password").val("password");
+      $("#new_password").val("password");
+
+      bid.manageAccount.changePassword(function(status) {
+        equal(status, false, "do not update when old and new passwords are the same");
+        testHelpers.testTooltipVisible();
+        start();
+      });
+    });
+  });
+
   asyncTest("changePassword with XHR error - error message", function() {
     bid.manageAccount(mocks, function() {
       xhr.useResult("invalid");
@@ -242,7 +273,6 @@
   });
 
   asyncTest("changePassword with user authenticated to password level, happy case", function() {
-
     bid.manageAccount(mocks, function() {
       $("#old_password").val("oldpassword");
       $("#new_password").val("newpassword");
@@ -250,6 +280,10 @@
       bid.manageAccount.changePassword(function(status) {
         equal(status, true, "on proper completion, status is true");
         equal(tooltip.shown, false, "on proper completion, tooltip is not shown");
+
+        equal($("#old_password").val(), "", "old_password field is cleared");
+        equal($("#new_password").val(), "", "new_password field is cleared");
+
         start();
       });
     });

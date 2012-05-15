@@ -1,13 +1,12 @@
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+
 language: node_js
- 
+
 before_install:
  - sudo apt-get install libgmp3-dev
- - "mysql -e 'create database myapp_test;'"
-
-mysql:
-  adapter: mysql2
-  encoding: utf8
-
+ - "mysql -e 'create database browserid;'"
 node_js:
  - 0.6
 
@@ -15,4 +14,16 @@ env:
  - DB=mysql NODE_ENV=test_mysql
 
 notifications:
-  irc: "irc.mozilla.org#identity"
+  email:
+    - dburns@mozilla.com
+
+env:
+ - WHAT_TESTS=front MYSQL_USER=root
+ - WHAT_TESTS=back_mysql MYSQL_USER=root
+ - WHAT_TESTS=back
+
+mysql:
+  adapter: mysql2
+  username: root
+  encoding: utf8
+  database: browserid

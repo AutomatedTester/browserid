@@ -13,12 +13,13 @@
       testHelpers = bid.TestHelpers,
       register = testHelpers.register;
 
-  function createController(verifier, message) {
+  function createController(verifier, message, required) {
     controller = bid.Modules.CheckRegistration.create();
     controller.start({
       email: "registered@testuser.com",
       verifier: verifier,
-      verificationMessage: message
+      verificationMessage: message,
+      required: required
     });
   }
 
@@ -47,10 +48,18 @@
     controller.startCheck();
   }
 
-  asyncTest("user validation with mustAuth result", function() {
+  asyncTest("user validation with mustAuth result - callback with email, type and known set to true", function() {
     xhr.useResult("mustAuth");
-
-    testVerifiedUserEvent("authenticate", "User Must Auth");
+    createController("waitForUserValidation");
+    register("authenticate", function(msg, info) {
+      // we want the email, type and known all sent back to the caller so that
+      // this information does not need to be queried again.
+      equal(info.email, "registered@testuser.com", "correct email");
+      ok(info.type, "type sent with info");
+      ok(info.known, "email is known");
+      start();
+    });
+    controller.startCheck();
   });
 
   asyncTest("user validation with pending->complete result ~3 seconds", function() {
@@ -76,7 +85,7 @@
     });
   });
 
-  asyncTest("back - raise cancel_state", function() {
+  asyncTest("back for normal account creation/email addition - raise cancel_state", function() {
     createController("waitForUserValidation", "user_verified");
     controller.startCheck(function() {
       register("cancel_state", function() {
@@ -87,14 +96,14 @@
     });
   });
 
-  asyncTest("cancel - raise cancel", function() {
-    createController("waitForUserValidation", "user_verified");
+  asyncTest("back for required email - raise cancel", function() {
+    createController("waitForUserValidation", "user_verified", true);
     controller.startCheck(function() {
       register("cancel", function() {
         ok(true, "cancel is triggered");
         start();
       });
-      controller.cancel();
+      controller.back();
     });
   });
 

@@ -51,8 +51,9 @@ BrowserID.Modules.PageModule = (function() {
 
     start: function(options) {
       var self=this;
+      self.options = options || {};
+
       self.bind("form", "submit", cancelEvent(onSubmit));
-      self.click("#thisIsNotMe", self.close.bind(self, "notme"));
     },
 
     stop: function() {
@@ -153,6 +154,7 @@ BrowserID.Modules.PageModule = (function() {
     submit: function() {
     },
 
+    // XXX maybe we should not get rid of this.
     close: function(message) {
       this.destroy();
       if (message) {
@@ -176,7 +178,17 @@ BrowserID.Modules.PageModule = (function() {
      * @param {object} [context] - context, if not given, use this.
      */
     subscribe: function(message, callback, context) {
-      mediator.subscribe(message, callback.bind(context || this));
+      mediator.subscribe(message, callback, context || this);
+    },
+
+    /**
+     * Subscribe to all messages on the mediator.
+     * @method subscribeAll
+     * @param {function} callback
+     * @param {object} [context] - context, if not given, use this.
+     */
+    subscribeAll: function(callback, context) {
+      mediator.subscribeAll(callback, context || this);
     },
 
     /**

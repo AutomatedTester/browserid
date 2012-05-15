@@ -46,7 +46,8 @@ suite.addBatch({
   "account staging": {
     topic: wsapi.post('/wsapi/stage_user', {
       email: TEST_EMAIL,
-      site:'fakesite.com'
+      pass: TEST_PASSWORD,
+      site:'https://fakesite.com'
     }),
     "works":     function(err, r) {
       assert.equal(r.code, 200);
@@ -72,8 +73,7 @@ suite.addBatch({
   "setting password": {
     topic: function() {
       wsapi.post('/wsapi/complete_user_creation', {
-        token: token,
-        pass: TEST_PASSWORD
+        token: token
       }).call(this);
     },
     "works just fine": function(err, r) {
@@ -87,11 +87,12 @@ suite.addBatch({
   "the password": {
     topic: function() {
       var cb = this.callback;
-      db.emailToUID(TEST_EMAIL, function(uid) {
+      db.emailToUID(TEST_EMAIL, function(err, uid) {
         db.checkAuth(uid, cb);
       });
     },
-    "is bcrypted with the expected number of rounds": function(r) {
+    "is bcrypted with the expected number of rounds": function(err, r) {
+      assert.isNull(err);
       assert.equal(typeof r, 'string');
       assert.equal(config.get('bcrypt_work_factor'), bcrypt.get_rounds(r));
     }
@@ -116,7 +117,8 @@ suite.addBatch({
   "re-authentication": {
     topic: wsapi.post('/wsapi/authenticate_user', {
       email: TEST_EMAIL,
-      pass: TEST_PASSWORD
+      pass: TEST_PASSWORD,
+      ephemeral: false
     }),
     "should work": function(err, r) {
       assert.strictEqual(JSON.parse(r.body).success, true);
@@ -134,11 +136,12 @@ suite.addBatch({
     "if we recheck the auth hash": {
       topic: function() {
         var cb = this.callback;
-        db.emailToUID(TEST_EMAIL, function(uid) {
+        db.emailToUID(TEST_EMAIL, function(err, uid) {
           db.checkAuth(uid, cb);
         });
       },
-      "its bcrypted with 8 rounds": function(r) {
+      "its bcrypted with 8 rounds": function(err, r) {
+        assert.isNull(err);
         assert.equal(typeof r, 'string');
         assert.equal(8, bcrypt.get_rounds(r));
       }
@@ -151,7 +154,8 @@ suite.addBatch({
   "and re-authentication": {
     topic: wsapi.post('/wsapi/authenticate_user', {
       email: TEST_EMAIL,
-      pass: TEST_PASSWORD
+      pass: TEST_PASSWORD,
+      ephemeral: false
     }),
     "should still work": function(err, r) {
       assert.strictEqual(JSON.parse(r.body).success, true);

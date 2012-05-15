@@ -5,6 +5,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const
+https = require('https'),
+und = require('underscore'),
+urlp = require('url'),
+util = require('util'),
+
 primary = require('../lib/primary'),
 logging = require('../lib/logging.js');
 
@@ -15,11 +20,84 @@ if (process.argv.length !== 3) {
   console.log('Usage:', process.argv[1], '<domain>');
   process.exit(1);
 }
+var domain = process.argv[2];
 
-primary.checkSupport(process.argv[2], function(err, rv) {
-  if (err) {
-    process.stderr.write("error: " + err + "\n");
+primary.checkSupport(domain, function(err, urls, publicKey) {
+  if (err || publicKey === null) {
+    if (err) {
+      process.stderr.write("error: " + err + "\n");
+    }
     process.exit(1);
   }
-  console.log(rv);
+  console.log('Primary domain: ', domain);
+  console.log('Public Key: ', publicKey);
+
+  var authopts = {
+      xframe: false
+  };
+  getResource('auth', urls.auth, urls, authopts, function () {
+    getResource('prov', urls.prov, urls, {
+      xframe: true
+    });
+  });
+
 });
+
+/**
+ * Retrieve one of their urls and examine aspects of it for issues
+ */
+function getResource(mode, url, urls, opts, cb) {
+  var path = urlp.parse(url).path;
+  var body = "",
+      r = https.request({
+    host: domain,
+    path: path,
+    method: 'GET'
+  }, checkResource(url, opts, body));
+  r.on('data', function (chunk) {
+    body += chunk;
+  });
+  r.on('error', function (e) {
+    console.log("ERROR: ", e.message);
+  });
+  r.on('close', function () {
+    var includes = {
+      'auth': '/authentication_api.js',
+      'prov': '/provisioning_api.js'
+    };
+    if (body.indexOf(util.format("https://browserid.org%s", includes[mode])) == -1 &&
+        body.indexOf(util.format("https://diresworb.org%s", includes[mode])) == -1 &&
+        body.indexOf(util.format("https://dev.diresworb.org%s", includes[mode])) == -1) {
+        console.log(util.format("WARNING: No https://browserid.org/%s script tag detected", includes[mode]));
+    }
+    if (cb) {
+        cb();
+    }
+  });
+  r.end();
+};
+
+/**
+ * Called once we have a response.
+ *
+ * Do the provisioning and signin resources look kosher?
+ */
+function checkResource (url, opts, body) {
+  return function (resp) {
+    // Their are no X-Frame options
+    if (resp.statusCode != 200) {
+      console.log("ERROR: HTTP status code=", resp.statusCode, url);
+    } else {
+      if (opts.xframe === true) {
+        var xframe = und.filter(Object.keys(resp.headers), function (header) {
+          return header.toLowerCase() == 'x-frame-options';
+        });
+        if (xframe.length == 1) {
+          console.log("ERROR: X-Frame-Options=", resp.headers[xframe[0]], ", BrowserID will not be able to communicate with your site." +
+              " Suppress X-Frame-Options for ", url);
+        }
+      }
+      resp.setEncoding('utf8');
+    }
+  };
+};

@@ -11,6 +11,7 @@ $(function() {
    */
 
   var bid = BrowserID,
+      helpers = bid.Helpers,
       pageHelpers = bid.PageHelpers,
       user = bid.User,
       dom = bid.DOM,
@@ -20,10 +21,21 @@ $(function() {
       path = document.location.pathname,
       moduleManager = bid.module,
       modules = bid.Modules,
-      CodeCheck = modules.CodeCheck,
+      CookieCheck = modules.CookieCheck,
       XHRDelay = modules.XHRDelay,
-      XHRDisableForm = modules.XHRDisableForm;
+      XHRDisableForm = modules.XHRDisableForm,
+      ANIMATION_TIME = 500,
+      checkCookiePaths = [ "/signin", "/signup", "/forgot", "/add_email_address", "/verify_email_address" ];
 
+
+  function shouldCheckCookies(path) {
+    if (path) {
+      // IE6 and IE7 will blow up if trying to use indexOf on the array.
+      for(var i = 0, checkCookiePath; checkCookiePath = checkCookiePaths[i]; ++i) {
+        if (checkCookiePath === path) return true;
+      }
+    }
+  }
 
   xhr.init({ time_until_delay: 10 * 1000 });
   network.init();
@@ -33,58 +45,96 @@ $(function() {
     $(window).bind('resize', function() { $('#vAlign').css({'height' : $(window).height() }); }).trigger('resize');
   }
 
-  dom.addClass("body", "ready");
-
   moduleManager.register("xhr_delay", XHRDelay);
+  moduleManager.start("xhr_delay");
+
   moduleManager.register("xhr_disable_form", XHRDisableForm);
-  if (!path || path === "/") {
-    bid.index();
+  moduleManager.start("xhr_disable_form");
+
+  if(shouldCheckCookies(path)) {
+    // do a cookie check on every page except the main page.
+    moduleManager.register("cookie_check", CookieCheck);
+    moduleManager.start("cookie_check", { ready: start });
   }
-  else if (path === "/signin") {
-    var module = bid.signIn.create();
-    module.start({});
+  else {
+    // the main page makes it through without checking for cookies.
+    start(true);
   }
-  else if (path === "/signup") {
-    bid.signUp();
-  }
-  else if (path === "/forgot") {
-    bid.forgot();
-  }
-  else if (path === "/add_email_address") {
-    var module = bid.addEmailAddress.create();
-    module.start({
-      token: token
+
+  function start(status) {
+    // If cookies are disabled, do not run any of the page specific code and
+    // instead just show the error message.
+    if(!status) return;
+
+    dom.addClass("body", "ready");
+
+    if (!path || path === "/") {
+      bid.index();
+    }
+    else if (path === "/signin") {
+      var module = bid.signIn.create();
+      module.start({});
+    }
+    else if (path === "/signup") {
+      var module = bid.signUp.create();
+      module.start({});
+    }
+    else if (path === "/forgot") {
+      bid.forgot();
+    }
+    else if (path === "/add_email_address") {
+      var module = bid.verifySecondaryAddress.create();
+      module.start({
+        token: token,
+        verifyFunction: "verifyEmail"
+      });
+    }
+    else if(path === "/verify_email_address") {
+      var module = bid.verifySecondaryAddress.create();
+      module.start({
+        token: token,
+        verifyFunction: "verifyUser"
+      });
+    }
+    else {
+      // Instead of throwing a hard error here, adding a message to the console
+      // to let developers know something is up.
+      helpers.log("unknown path");
+    }
+
+    user.checkAuthentication(function(authenticated) {
+      if (authenticated) {
+        displayAuthenticated();
+      }
+      else {
+        displayNonAuthenticated();
+      }
     });
-  }
-  else if(token && path === "/verify_email_address") {
-    bid.verifyEmailAddress(token);
-  }
 
-  $("a.signOut").click(function(event) {
-    event.preventDefault();
-    event.stopPropagation();
+    function displayAuthenticated() {
+      $(".display_always,.display_auth").fadeIn(ANIMATION_TIME);
+      dom.addClass("body", "authenticated");
 
-    user.logoutUser(function() {
-      document.location = "/";
-    }, pageHelpers.getFailure(bid.Errors.logout));
-  });
-
-  var ANIMATION_TIME = 500;
-  user.checkAuthentication(function(authenticated) {
-    $(".display_always").fadeIn(ANIMATION_TIME);
-
-    dom.addClass("body", authenticated ? "authenticated" : "not_authenticated");
-    if (authenticated) {
-      $(".display_auth").fadeIn(ANIMATION_TIME);
       if ($('#emailList').length) {
         bid.manageAccount();
       }
+
+      $("a.signOut").click(function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        user.logoutUser(function() {
+          document.location = "/";
+        }, pageHelpers.getFailure(bid.Errors.logout));
+      });
     }
-    else {
+
+    function displayNonAuthenticated() {
+      $(".display_always").fadeIn(ANIMATION_TIME);
+      dom.addClass("body", "not_authenticated");
       $(".display_nonauth").fadeIn(ANIMATION_TIME);
     }
-  });
-
+  }
 
 });
 

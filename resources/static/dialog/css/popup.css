@@ -11,33 +11,57 @@ h2 {
     font-weight: bold;
 }
 
-
-#wrapper {
-    min-width: 640px;
-    position: relative;
+header, footer {
+    position: absolute;
+    /* The *padding is a fix for IE6 and IE7 showing scroll bars in the
+     * unsupported dialog.  Since IE6 and IE7 do not support box-sizing:
+     * border-box, the left and right padding cause these versions of IE to
+     * overflow the dialog box.
+     */
+    padding: 20px;
+    *padding: 20px 0;
+    z-index: 2;
 }
 
-
-.vertical {
-    height: 250px;
+header {
+    top: 0;
+    font-weight: bold;
+    border-bottom: 1px solid #c7c6c1;
+    background-color: rgba(0,0,0,0.05);
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c000000,endColorstr=#0c000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c000000,endColorstr=#0c000000);
+    zoom: 1;
+    -webkit-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
+         -o-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
 }
 
-.table {
-    display: table;
-    width: 100%;
+footer {
+    bottom: 0;
+    font-size: 12px;
+    color: #62615F;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+    border-top: 1px solid #c7c6c1;
 }
 
-.table .vertical {
-    display: table-cell;
-    vertical-align: middle;
+footer a {
+    color: #62615f;
+    border-bottom: 1px dotted #999;
 }
 
-#content {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-    /* Fix for IE6 not displaying the unsupported dialog correctly */
-    _width: 100%;
+footer a:hover {
+    color: #333;
+}
+
+label {
+    display: block;
+    color: #62615F;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+}
+
+label.selectable {
+    cursor: pointer;
 }
 
 section {
@@ -50,10 +74,55 @@ section {
     z-index: 0;
 }
 
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.table .vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*
+.contents {
+    max-height: 210px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}*/
+
+
 section > .contents {
     display: table-cell;
     vertical-align: middle;
     height: 250px;
+}
+
+.form_section {
+    width: 250px;
+}
+
+
+.contents > strong {
+    display: none;
+}
+
+#content {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 61px;
+    bottom: 61px;
+    /* Fix for IE6 not displaying the unsupported dialog correctly. IE6 by
+     * default sets the height and width of the element to 0 meaning nothing
+     * shows up on the screen.
+     * Note, these are magic numbers that depend on the width and height of the
+     * dialog.  The height also depends on the height of the header and footer.
+     */
+    _width: 682px;
+    _height: 250px;
 }
 
 #wait, #error, #delay {
@@ -87,26 +156,26 @@ section > .contents {
   background-image: url("/i/bg.png");
 }
 
-
 .waiting #wait {
+    display: block;
     z-index: 1;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
 }
 
-.error #error, #error.unsupported, #error.cookies_disabled {
-    z-index: 3;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    opacity: 1;
-}
-
 .delay #delay {
+    display: block;
     z-index: 2;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
 }
 
-
+.error #error, #error.unsupported, #error.cookies_disabled {
+    display: block;
+    z-index: 3;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
 
 #error.unsupported {
   padding: 20px 0;
@@ -150,33 +219,51 @@ section > .contents {
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
+    width: 325px;
 }
 
-#signIn .container {
+#signIn .table {
     /**
      * Set the width of the container for when the arrow animation happens
      * otherwise the buttons slide right with the arrow
      */
-    width: 325px;
+    /*width: 325px;*/
+    padding: 20px 52px 20px 20px;
+}
+
+.arrowContainer {
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(left, #c7c7c7, #fff 2px);
+    background-image:    -moz-linear-gradient(left, #c7c7c7, #fff 2px);
+    background-image:     -ms-linear-gradient(left, #c7c7c7, #fff 2px);
+    background-image:      -o-linear-gradient(left, #c7c7c7, #fff 2px);
+    background-image:         linear-gradient(left, #c7c7c7, #fff 2px);
 }
 
 .arrow {
-    width: 40px;
-    height: 250px;
     display: block;
     position: absolute;
-    right: 0px;
     top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-image: url('/i/arrow.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 #favicon {
     position: absolute;
     left: 375px;
     top: 0;
+    bottom: 0;
     right: 0;
     z-index: 10;
 }
@@ -191,8 +278,7 @@ section > .contents {
 }
 
 #favicon .vertical {
-    display: block;
-    line-height: 250px;
+    display: table-cell;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -204,65 +290,40 @@ div#required_email {
     font-weight: bold;
 }
 
-#signIn .vertical {
-    padding: 20px 52px 20px 20px;
-    position: relative;
+#selectEmail {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    width: 250px;
+    overflow-y: auto;
 }
 
-#signIn .vertical ul {
-  list-style-type: none;
+#selectEmail.center {
+    position: static;
+    overflow-y: visible;
+    /* The below 1px padding is part of a fix for a bug in webkit where there
+     * is a ghost padding-right to accommodate the scroll bar that is shown
+     * if there are many email addresses. The ghost padding caused the submit
+     * button to shift when the user clicked on it, sometimes making the
+     * submit button require two clicks.  The other half of the fix is in
+     * screen_size_hacks.js, where an adjustment to the width is made.
+     * These two in combination force Chrome to re-flow, which fixes its
+     * own bug.
+     */
+    padding-right: 1px;
 }
 
-#signIn .vertical ul li {
+.inputs {
+  line-height: 18px;
+}
+
+.inputs > li {
   margin-top: 10px;
 }
 
-#signIn .vertical ul li:first-child {
+.inputs > li:first-child {
   margin-top: 0;
-}
-
-#signIn .submit {
-    line-height: 28px;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 52px;
-}
-
-#signIn .submit > p {
-  line-height: 13px;
-  clear: right;
-  text-align: center;
-}
-
-#signIn label.half,
-.half {
-    width: 50%;
-    display: inline-block;
-    float: left;
-}
-
-#forgotPassword {
-    color: #888784;
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-    font-size: 11px;
-}
-
-#signIn button.create {
-    font-size: 14px;
-    height: 28px;
-    padding: 0 10px;
-    float: right;
-}
-
-label {
-    display: block;
-    color: #62615F;
-    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-}
-
-label.selectable {
-    cursor: pointer;
 }
 
 .inputs > li > label {
@@ -271,7 +332,7 @@ label.selectable {
     text-overflow: ellipsis;
 }
 
-#signIn #selectEmail > .inputs > li {
+#selectEmail > .inputs > li {
     margin: 0;
 }
 
@@ -280,97 +341,38 @@ label.selectable {
     white-space: nowrap;
 }
 
-.inputs > li > label.preselected {
+#selectEmail > .inputs > li > label.preselected {
     font-weight: bold;
 }
 
-.inputs > li:only-child > label.selectable {
+#selectEmail > .inputs > li:only-child > label.selectable {
     cursor: default;
 }
 
-.learn {
-    display: inline-block;
-    font-size: 12px;
-    color: #62615F;
-    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-}
-
-footer .learn a {
-    color: #549FDC;
-}
-
-.checkregistration p {
-    color: #62615F;
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-}
-
-header,
-footer {
-    display: block;
-    width: 100%;
-}
-
-header {
-    padding: 20px;
-    font-weight: bold;
-    border-bottom: 1px solid #c7c6c1;
-    background-color: rgba(0,0,0,0.05);
-    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c000000,endColorstr=#0c000000);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c000000,endColorstr=#0c000000);
-    zoom: 1;
-    -webkit-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
-         -o-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
-            box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1) inset;
-}
-
-header ul {
-    display: block;
-    float: left;
-}
-
-header ul li {
-    margin: 0 10px 0 0;
-    color: #222;
-    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-}
-
-footer {
-    border-top: 1px solid #c7c6c1;
-    padding: 20px;
-}
-
-.inputs {
-    margin: 1em 0 .5em;
-    line-height: 18px;
-    max-height: 130px;
-    overflow-y: auto;
-}
-
-/* Some languages have long text for the "sign in" and "use a different email"
- * buttons.  If the user >= 6 emails in these languages, the buttons overlap.
- * This shrinks the email address box by one address to prevent this overlap.
- */
-#selectEmail .inputs {
-    max-height: 115px;
-}
-
-
-.add {
-    font-size: 80%;
-}
-
-.inputs > li:only-child input[type=radio] {
+#selectEmail > .inputs > li:only-child input[type=radio] {
     display: none;
 }
 
-label[for=remember] {
-  display: inline;
-  margin-left: 13px;
+.submit {
+    line-height: 28px;
+    margin-top: 10px;
+    color: #333;
+    font-size: 11px;
+    line-height: 1.2;
 }
 
-#thisIsNotMe {
-  float: right;
+.submit > p + p:last-child {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.tospp > a {
+    color: #333;
+    border-bottom: 1px dotted #999;
+}
+
+.tospp > a:hover {
+    color: #000;
 }
 
 a.emphasize {
@@ -382,25 +384,42 @@ a.emphasize {
   line-height: 18px;
 }
 
+a.emphasize:hover {
+  background-color: #fbfafa;
+}
+
+
+#back {
+  color: #000;
+  border-bottom: 1px dotted;
+}
+
 .submit > button {
     margin: 0 0 0 5px;
 }
 
-#newEmail {
-    -moz-box-flex: 1;
-}
-
 .newuser,
-.forgot,
 .returning {
     display: none;
 }
 
-#create_text_section {
-    color: #222;
+#your_computer_content {
+  width: 90%;
+  margin: auto;
+  text-align: left;
 }
 
-#checkemail {
-    text-align: center;
+#your_computer_content p button {
+  float: left;
+  margin: 0 1em 0 0;
+  vertical-align: middle;
+  font-size: 1em;
+  width: 4em;
 }
 
+#your_computer_content p {
+  padding-bottom: 1em;
+  line-height: 1.3em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

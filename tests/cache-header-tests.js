@@ -45,13 +45,35 @@ function doRequest(path, headers, cb) {
   req.end();
 }
 
+function hasProperFramingHeaders(r, path) {
+  if (['/communication_iframe', '/relay'].indexOf(path) !== -1) {
+    assert.strictEqual(r.headers['x-frame-options'], undefined);
+  } else {
+    assert.strictEqual(r.headers['x-frame-options'],"DENY");
+  }
+}
+
 function hasProperCacheHeaders(path) {
   return {
     topic: function() {
-      doRequest(path, {}, this.callback);
+      var self = this;
+      // note we do *two* requests to the same resource.  The way
+      // etagify works is to generate content based hashes on the first
+      // request, and then use them every subsequent request.  This
+      // minimizes complexity and buffering that we do, at the cost of
+      // the first client after server restart possibly getting a couple
+      // extra kilobytes over the wire in a 200-that-shoulda-been-a-304.
+      // See issue #1331 and https://github.com/lloyd/connect-etagify
+      // for more context.
+      doRequest(path, {}, function(err, r) {
+        if (err) self.callback(err, r);
+        else doRequest(path, {}, self.callback);
+      });
     },
     "returns 200 with content": function(err, r) {
       assert.strictEqual(r.statusCode, 200);
+      // check X-Frame-Option headers
+      hasProperFramingHeaders(r, path);
       // ensure vary headers
       assert.strictEqual(r.headers['vary'], 'Accept-Encoding,Accept-Language');
       // ensure public, max-age=0
@@ -70,12 +92,17 @@ function hasProperCacheHeaders(path) {
         }, this.callback);
       },
       "returns a 304": function(err, r) {
+        if (!err) hasProperFramingHeaders(r, path);
         assert.strictEqual(r.statusCode, 304);
       }
     },
     "followed by a request with an if-modified-since cache header, and bogus etag": {
       topic: function(err, r) {
-        var etag = r.headers['etag'].replace(/"$/, "bogus\"");
+        var etag = r.headers['etag'] = '"bogus"';
+        // No ETag present in iframes, make one
+        if (['/communication_iframe', '/relay'].indexOf(path) === -1) {
+          etag = r.headers['etag'].replace(/"$/, "bogus\"");
+        }
         doRequest(path, {
           "If-None-Match": etag
         }, this.callback);

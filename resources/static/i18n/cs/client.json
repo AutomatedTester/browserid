@@ -1,365 +1,394 @@
-var json_locale_data = {
-   "client" : {
-      "Cancelling User Account" : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " cs",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "client": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-03-09 20:58+0200",
+         "Last-Translator": " Pavel <jasnapaka@jasnapaka.com>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " cs",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "Plural-Forms": " nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "Always sign in using this email" : [
+      "BrowserID requires cookies": [
          null,
-         ""
+         "BrowserID vyžaduje cookies"
       ],
-      "Sync Keys for Address" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
-         ""
+         "Zavřete prosím okno, <a %s>povolte cookies</a> a zkuste to znovu."
       ],
-      "Syncing Email Addresses" : [
+      "Communication Error": [
          null,
-         ""
+         "Chyba při komunikaci"
       ],
-      "Unfortunately, BrowserID cannot communicate while offline!" : [
+      "Finishing Sign In...": [
          null,
-         ""
+         "Probíhá dokončování přihlašování"
       ],
-      "Sign in using" : [
+      "In just a moment you'll be signed into BrowserID.": [
          null,
-         ""
+         "Za chvíli budete přihlášeni k BrowserID."
       ],
-      "Relay frame could not be found" : [
+      "Please wait a few seconds while we sign you into the site.": [
          null,
-         ""
+         "Počkejte prosím několik sekund, probíhá přihlášení k webu."
       ],
-      "Password" : [
+      "We are sorry, this request is taking a LOOONG time.": [
          null,
-         ""
+         "Omlouváme se, tento požadavek trvá DLOUHO."
       ],
-      "We sent a confirmation email to <strong>%s</strong>" : [
+      "This message will go away when the request completes (hopefully soon). If you wait too long, close this window and try again.": [
          null,
-         ""
+         "Tato zpráva zmizí, jakmile se požadavek dokončí (doufejme brzy). Pokud čekáte příliš dlouho, zavřete toto okno a zkuste to znovu."
       ],
-      "To finish signing in just click the verify link we sent to your email address." : [
+      "Sign in using": [
          null,
-         ""
+         "Přihlášení pomocí"
       ],
-      "Cancel" : [
+      "New email address": [
          null,
-         ""
+         "Nová e-mailová adresa"
       ],
-      "To verify that you own <strong id='primary_email'>%s</strong>, you must sign in with your provider.  This window will be redirected to" : [
+      "This field must be an email address.": [
          null,
-         ""
+         "Pole musí obsahovat e-mailovou adresu."
       ],
-      "Authenticating with Assertion" : [
+      "The email field is required.": [
          null,
-         ""
+         "Pole s e-mailem je vyžadováno."
       ],
-      "Reset Password" : [
+      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again.": [
          null,
-         ""
+         "Právě jsme poslali e-mail na vaši adresu! Pokud skutečně chcete poslat další, počkejte minutu či dvě a zkuste to znovu."
       ],
-      "Resetting Password" : [
+      "That address is already added to your account!": [
          null,
-         ""
+         "Tato adresa již byla k vašemu účtu přidána!"
       ],
-      "Logout Failed" : [
+      "add": [
          null,
-         ""
+         "přidat"
       ],
-      "Checking Email Address" : [
+      "cancel": [
          null,
-         ""
+         "zrušit"
       ],
-      "To verify that you own this address, you must sign in with your provider.  This window will be redirected to" : [
+      "Email": [
          null,
-         ""
+         "E-mail"
       ],
-      "This is not me..." : [
+      "Enter your email address to sign in to <strong>%s</strong>": [
          null,
-         ""
+         "Vložte svou e-mailovou adresou a přihlašte se k <strong>%s</strong>"
       ],
-      "We are sorry, BrowserID requires cookies" : [
+      "Welcome to BrowserID!": [
          null,
-         ""
+         "Vítá vás BrowserID!"
       ],
-      "In just a moment you'll be signed into BrowserID." : [
+      "This email looks new, so let's get you set up.": [
          null,
-         ""
+         "E-mail vypadá nově. Proveďte jeho nastavení."
       ],
-      "Getting Assertion" : [
+      "Password": [
          null,
-         ""
+         "Heslo"
       ],
-      "Completing User Registration" : [
+      "forgot your password?": [
          null,
-         ""
+         "zapomněl(a) jste heslo?"
       ],
-      "Registration Failed" : [
+      "The password field is required.": [
          null,
-         ""
+         "Pole s heslem je vyžadováno."
       ],
-      "This message will go away when the request completes (hopefully soon).  If you wait too long, close this window and try again." : [
+      "The account cannot be logged in with this username and password.": [
          null,
-         ""
+         "K účtu se nemůžete přihlásit s tímto uživatelským jménem a heslem."
       ],
-      "translated text" : [
+      "By clicking %s, you confirm that you accept this site's <a %s>Terms of Use</a> and <a %s>Privacy Policy</a>.": [
          null,
-         ""
+         "Klepnutím na %s potvrzujete, že souhlasíte se <a %s>zásadami použití</a>  a <a %s>zásadami pro soukromí</a> webu."
       ],
-      "The email field is required." : [
+      "next": [
          null,
-         ""
+         "další"
       ],
-      "New email address" : [
+      "verify email": [
          null,
-         ""
+         "ověření e-mailu"
       ],
-      "verify email" : [
+      "sign in": [
          null,
-         ""
+         "přihlášení"
       ],
-      "Checking if Cookies are Enabled" : [
+      "Cannot verify %s": [
          null,
-         ""
+         "Nelze ověřit %s"
       ],
-      "Provisioning Unsupported Identity Provider" : [
+      "%s is a required address, but we cannot verify that you own this address.": [
          null,
-         ""
+         "%s je požadovaná adresa, ale my nemůžeme ověřit, že je to vaše adresa."
       ],
-      "That address is already added to your account!" : [
+      "Check your email!": [
          null,
-         ""
+         "Zkontrolujte si svůj e-mail"
       ],
-      "Authenticating with Identity Provider" : [
+      "We sent a confirmation email to <strong>%s</strong>": [
          null,
-         ""
+         "Poslali jsme vám ověřovací e-mail na adresu <strong>%s</strong>."
       ],
-      "Remove Email Address from Account" : [
+      "To finish signing in just click the verify link we sent to your email address.": [
          null,
-         ""
+         "Pro dokončení ověřování jednoduše klepněte na odkaz, který jsme zaslali na vaši e-mailovou adresu."
       ],
-      "Communication Error" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"cancel\">cancel</a>.": [
          null,
-         ""
+         "Pokud je to omyl, jednoduše zaslaný e-mail ignorujte a <a href=\"#\" id=\"back\">zrušte jej</a>."
       ],
-      "Provisioning with Identity Provider" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"back\">use another email address</a>.": [
          null,
-         ""
+         "Pokud je to omyl, jednoduše zaslaný e-mail ignorujte a <a href=\"#\" id=\"back\">použijte jinou e-mailovou adresu</a>."
       ],
-      "Adding Address" : [
+      "We are very sorry, the server is under extreme load!": [
          null,
-         ""
+         "Velice se omlouváme, ale server je momentálně přetížen."
       ],
-      "Check your email!" : [
+      "We are very sorry, there has been an error!": [
          null,
-         ""
+         "Velice se omlouváme, ale vyskytla se chyba."
       ],
-      "The site requested you sign in using" : [
+      "Please reload the page and try again.": [
          null,
-         ""
+         "Obnovte prosím stránku a zkuste to znovu."
       ],
-      "Syncing Address" : [
+      "Please close this window and try again.": [
          null,
-         ""
+         "Zavřete prosím okno a zkuste to znovu."
       ],
-      "Use a different email" : [
+      "See more info": [
          null,
-         ""
+         "Zobrazení více informací"
       ],
-      "next" : [
+      "The site requested you sign in using": [
          null,
-         ""
+         "Stránka, ke které se chcete přihlásit, používá"
       ],
-      "Verifying email address" : [
+      "reset password": [
          null,
-         ""
+         "obnova hesla"
       ],
-      "Signup Failed" : [
+      "*%s* is not a valid email address!": [
          null,
-         ""
+         "*%s* není platnou e-mailovou adresou!"
       ],
-      "This email looks new, so let&apos;s get you set up." : [
+      "To continue, please close the window and enter a valid address.": [
          null,
-         ""
+         "Pro pokračování prosím zavřete okno a vložte platnou e-mailovou adresu."
       ],
-      "Checking Script Version" : [
+      "This is not me...": [
          null,
-         ""
+         "Nejsem to já..."
       ],
-      "You are offline!" : [
+      "Use a different email": [
          null,
-         ""
+         "Použít jiný e-mail"
       ],
-      "Unfortunately, the email address provided cannot act as a Primary Identity Provider" : [
+      "Always sign in using this email": [
          null,
-         ""
+         "Vždy se přihlašovat pomocí tohoto e-mailu"
       ],
-      "Checking Authentication" : [
+      "Address Verified!": [
          null,
-         ""
+         "Adresa ověřena!"
       ],
-      "Getting Token Info" : [
+      "Your identity has been verified with your email provider, we will now try to sign you in.": [
          null,
-         ""
+         "Vaše identita byla pomocí poskytovatele pošty ověřena. Nyní vás zkusíme přihlásit."
       ],
-      "forgot your password?" : [
+      "You must sign in with your email provider to verify ownership of this address. This window will be redirected to": [
          null,
-         ""
+         "Nyní musíte ověřit, že zvolená e-mailová adresa je skutečně vaše. Toto okno bude přesměrováno na"
       ],
-      "Address Verified!" : [
+      "verify": [
          null,
-         ""
+         "ověření"
       ],
-      "This field must be an email address." : [
+      "Verify With Email Provider": [
          null,
-         ""
+         "Ověření pomocí poskytovatele pošty"
       ],
-      "We are sorry, but we cannot communicate with BrowserID while you are offline." : [
+      "#~ \"BrowserID requires your browser's cookies to be enabled to operate. \"#~ \"Please enable your browser's cookies and try again\"": [
          null,
-         ""
+         "#~ \"Pro fungování BrowserID je nutné mít v prohlížeči povolené cookies. \"#~ \"Povolte prosím ve svém prohlížeči cookies a zkuste to znovu.\""
       ],
-      "Authenticating User" : [
+      "You are offline!": [
          null,
-         ""
+         "Jste offline!"
       ],
-      "This email looks new, so let&#39;s get you set up." : [
+      "Unfortunately, BrowserID cannot communicate while offline!": [
          null,
-         ""
+         "BrowserID bohužel nemůže komunikovat, když jste offline!"
       ],
-      "Email" : [
+      "select email": [
          null,
-         ""
+         "volba e-mailu"
       ],
-      "Setting Password" : [
+      "#~ \"We are sorry, but we cannot communicate with BrowserID while you are \"#~ \"offline.\"": [
          null,
-         ""
+         "#~ \"Omlouváme se, ale nemůže komunikovat s BrowserID v situaci, kdy jste \"#~ \"offline.\""
       ],
-      "Finishing Sign In..." : [
+      "Authenticating User": [
          null,
-         ""
+         "Ověřování uživatele"
       ],
-      "select email" : [
+      "Adding Address": [
          null,
-         ""
+         "Přidávání adresy"
       ],
-      "Checking Address Info" : [
+      "Adding Primary Email Address to User": [
          null,
-         ""
+         "Přidávání primární e-mailové adresy k uživateli"
       ],
-      "Adding Primary Email Address to User" : [
+      "Checking Address Info": [
          null,
-         ""
+         "Kontrola informací o adrese"
       ],
-      "Your identity has been verified with your email provider, we will now try to sign you in." : [
+      "Authenticating with Assertion": [
          null,
-         ""
+         "Autentizace s potvrzením"
       ],
-      "Verify With Email Provider" : [
+      "Cancelling User Account": [
          null,
-         ""
+         "Rušení uživatelského účtu"
       ],
-      "Checking Whether User is Authenticated with IdP" : [
+      "Checking Authentication": [
          null,
-         ""
+         "Kontrola autentifikace"
       ],
-      "Updating password" : [
+      "Checking Script Version": [
          null,
-         ""
+         "Kontrola verze skriptu"
       ],
-      "We just sent an email to that address!  If you really want to send another, wait a minute or two and try again." : [
+      "Completing User Registration": [
          null,
-         ""
+         "Dokončování registrace uživatele"
       ],
-      "The password field is required." : [
+      "Checking if Cookies are Enabled": [
          null,
-         ""
+         "Kontrola, zda jsou cookies povoleny"
       ],
-      "cancel" : [
+      "Creating Account": [
          null,
-         ""
+         "Vytváření účtu"
       ],
-      "We had trouble communicating with your email provider, please try again!" : [
+      "Getting Assertion": [
          null,
-         ""
+         "Získání potvrzení"
       ],
-      "Creating Account" : [
+      "Checking Registration Token": [
          null,
-         ""
+         "Kontrola registračního tokenu"
       ],
-      "We are sorry, this request is taking a LOOONG time." : [
+      "Checking Email Address": [
          null,
-         ""
+         "Kontrola e-mailové adresy"
       ],
-      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again." : [
+      "Checking Whether User is Authenticated with IdP": [
          null,
-         ""
+         "Kontrola, zde je uživatel autentizován pomocí IdP"
       ],
-      "BrowserID requires your browser's cookies to be enabled to operate.  Please enable your browser's cookies and try again" : [
+      "Logout Failed": [
          null,
-         ""
+         "Odhlášení selhalo"
       ],
-      "Checking Registration Token" : [
+      "Authenticating with Identity Provider": [
          null,
-         ""
+         "Autentizace pomocí poskytovatele identity"
       ],
-      "add" : [
+      "#~ \"We had trouble communicating with your email provider, please try again!\"": [
          null,
-         ""
+         "#~ \"Vyskytl se problém při komunikaci s vaším poskytovatelem pošty. Zkuste to \"#~ \"prosím znovu!\""
       ],
-      "To continue, please close the window and enter a valid address." : [
+      "Provisioning with Identity Provider": [
          null,
-         ""
+         "Zprovoznění poskytovatele identity"
       ],
-      "Enter your email address to sign in to <strong>%s</strong>" : [
+      "Provisioning Unsupported Identity Provider": [
          null,
-         ""
+         "Zprovoznění nepodporovaného poskytovatele identity"
       ],
-      "Establishing Relay" : [
+      "#~ \"Unfortunately, the email address provided cannot act as a Primary \"#~ \"Identity Provider\"": [
          null,
-         ""
+         "#~ \"Zadaná e-mailová adresa nemůže bohužel sloužit jako primární poskytovatel \"#~ \"identity\""
       ],
-      "Signin Failed" : [
+      "Registration Failed": [
          null,
-         ""
+         "Registrace selhala"
       ],
-      "Verify" : [
+      "Establishing Relay": [
          null,
-         ""
+         "Navazování přenosu"
       ],
-      "sign in" : [
+      "Relay frame could not be found": [
          null,
-         ""
+         "Rámec přenosu se nepodařilo najít"
       ],
-      "The account cannot be logged in with this username and password." : [
+      "Resetting Password": [
          null,
-         ""
+         "Obnova hesla"
       ],
-      "Welcome to BrowserID!" : [
+      "Remove Email Address from Account": [
          null,
-         ""
+         "Odebrání e-mailové adresy z účtu"
       ],
-      "If this is a mistake, just ignore the sent email and <a href=\"#\" class=\"cancelVerify\" id=\"back\">use another email address</a>." : [
+      "Setting Password": [
          null,
-         ""
+         "Nastavení hesla"
       ],
-      "*%s* is not a valid email address!" : [
+      "Signin Failed": [
          null,
-         ""
+         "Přihlášení selhalo"
       ],
-      "Please wait a few seconds while we sign you into the site." : [
+      "Signup Failed": [
          null,
-         ""
+         "Odhlášení selhalo"
+      ],
+      "Syncing Address": [
+         null,
+         "Synchronizace adresy"
+      ],
+      "Syncing Email Addresses": [
+         null,
+         "Synchronizace e-mailových adres"
+      ],
+      "Sync Keys for Address": [
+         null,
+         "Synchronizace klíčů adresy"
+      ],
+      "Getting Token Info": [
+         null,
+         "Získání informace o tokenu"
+      ],
+      "Updating password": [
+         null,
+         "Aktualizace hesla"
+      ],
+      "Verifying email address": [
+         null,
+         "Ověření e-mailové adresy"
+      ],
+      "Cancel": [
+         null,
+         "Zrušit"
+      ],
+      "This email looks new, so let&apos;s get you set up.": [
+         null,
+         "Tento e-mail není ověřen. Proveďte prosím jeho ověření."
       ]
    }
 }

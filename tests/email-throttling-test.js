@@ -24,7 +24,8 @@ suite.addBatch({
   "staging a registration": {
     topic: wsapi.post('/wsapi/stage_user', {
       email: 'first@fakeemail.com',
-      site:'fakesite.com'
+      pass: 'firstfakepass',
+      site:'https://fakesite.com:443'
     }),
     "returns 200": function(err, r) {
       assert.strictEqual(r.code, 200);
@@ -49,7 +50,8 @@ suite.addBatch({
   "immediately staging another": {
     topic: wsapi.post('/wsapi/stage_user', {
       email: 'first@fakeemail.com',
-      site:'fakesite.com'
+      pass: 'firstfakepass',
+      site:'http://fakesite.com:80'
     }),
     "is throttled": function(err, r) {
       assert.strictEqual(r.code, 429);
@@ -60,7 +62,7 @@ suite.addBatch({
 suite.addBatch({
   "finishing creating the first account": {
     topic: function() {
-      wsapi.post('/wsapi/complete_user_creation', { token: token, pass: 'firstfakepass' }).call(this);
+      wsapi.post('/wsapi/complete_user_creation', { token: token }).call(this);
     },
     "works": function(err, r) {
       assert.equal(r.code, 200);
@@ -74,7 +76,7 @@ suite.addBatch({
   "add a new email address to our account": {
     topic: wsapi.post('/wsapi/stage_email', {
       email: 'second@fakeemail.com',
-      site:'fakesite.com'
+      site:'https://fakesite.com'
     }),
     "works": function(err, r) {
       assert.strictEqual(r.code, 200);
@@ -99,7 +101,7 @@ suite.addBatch({
   "re-adding that same new email address a second time": {
     topic: wsapi.post('/wsapi/stage_email', {
       email: 'second@fakeemail.com',
-      site:'fakesite.com'
+      site:'http://fakesite.com'
     }),
     "is throttled with a 429": function(err, r) {
       assert.strictEqual(r.code, 429);

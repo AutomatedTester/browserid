@@ -44,6 +44,11 @@ html[xmlns] .cf {
 
 header, section, footer {
   display: block;
+  width: 100%;
+}
+
+ul, li {
+  list-style-type: none;
 }
 
 .sans {
@@ -80,8 +85,17 @@ a {
   text-decoration: none;
 }
 
-a:hover, button:hover {
-  text-decoration: underline;
+a:hover {
+  color: #000;
+}
+
+a.action, #error a {
+  color: #549FDC;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+a.action:hover, #error a:hover {
+  color: #58a7e7;
 }
 
 p:last-child {
@@ -128,11 +142,17 @@ input[type=email]:disabled,
 input[type=password]:disabled {
     background-color: #f0f0f0;
     color: #4f4f4f;
+    /* The opacity and -webkit-text-fill-color are to override mobile Safari's
+     * default stylings that make reading input elements very difficult.
+     * issue #1311 */
+    -webkit-text-fill-color: #4f4f4f;
+    opacity: 1;
 }
 
 input[type=radio],
 input[type=checkbox] {
   cursor: pointer;
+  margin-left: 2px; /* necessary or chrome cuts off part of the radio button */
 }
 
 button,
@@ -161,17 +181,44 @@ button,
     background-color: #37A6FF;
     background-image: -moz-linear-gradient(center top , #76C2FF 0pt, #37A6FF 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76C2FF), color-stop(100%, #37A6FF));
+    white-space: nowrap;
+}
+
+button.negative {
+    border: 1px solid #E70227;
+    color: #fff;
+    text-shadow: -1px -1px 0 #E70227;
+
+    -webkit-box-shadow: 0 0 0 1px #FF1560 inset;
+       -moz-box-shadow: 0 0 0 1px #FF1560 inset;
+         -o-box-shadow: 0 0 0 1px #FF1560 inset;
+            box-shadow: 0 0 0 1px #FF1560 inset;
+
+    background-color: #E70227;
+    background-image: -moz-linear-gradient(center top , #FF1560 0pt, #E70227 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FF1560), color-stop(100%, #E70227));
 }
 
 button:hover,
 button:focus,
 .button:hover,
 .button:focus{
+    color: #fff;
     background-color: #76c2ff;
     background-image: -moz-linear-gradient(center top , #76C2FF 50%, #37A6FF 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #76C2FF), color-stop(100%, #37A6FF));
+}
+
+button.negative:hover,
+button.negative:focus,
+.button.negative:hover,
+.button.negative:focus{
+    background-color: #FF1560;
+    background-image: -moz-linear-gradient(center top , #FF1560 70%, #E70227 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #FF1560), color-stop(100%, #E70227));
 
 }
+
 
 button:active,
 .button:active {
@@ -204,19 +251,10 @@ button[disabled], .submit_disabled button, .submit_disabled .button,
   opacity: .5;
 }
 
-#cancel, #back {
-  background-color: transparent;
-  color: #549FDC;
-  font-size: 1em;
-  font-weight: normal;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  padding: 0;
-}
-
-
-.submit > a {
+.submit #cancel {
   float: right;
   margin-right: 15px;
+  line-height: 28px;
 }
 
 a.secondary[disabled], .submit_disabled a.secondary, .submit_disabled a.secondary:focus, .submit_disabled a.secondary:active {
@@ -232,7 +270,7 @@ hr {
 
 
 .right {
-  text-align: right;
+  float: right;
 }
 
 h1 {
@@ -246,25 +284,15 @@ header ul li {
   float: left;
 }
 
-header a {
-  color: #222;
-}
-
 header a.home {
   width: 80px;
   height: 21px;
-  background-image: url('/i/icon.png');
-  display: block;
-  background-position: left 4px;
-  background-repeat: no-repeat;
-  text-indent: -999px;
+  background: url("/i/icon.png") 0px 4px no-repeat;
+  text-indent: -9999px;
+  display: inline-block;
 }
 
 footer {
-  color: #aaa;
-}
-
-footer a {
   color: #aaa;
 }
 
@@ -276,15 +304,12 @@ footer ul li {
 
 footer .help {
     float: right;
-    color: #62615F;
     cursor: help;
 }
 
 .cancelVerify {
   font-weight: bold;
 }
-
-
 
 #wait, #delay {
   background-color: #fff;
@@ -298,10 +323,6 @@ footer .help {
     color: #ff0000;
 }
 
-#error ul, #error li {
-    list-style-type: none;
-}
-
 #wait strong, #error strong, #delay strong {
     color: #222;
     font-weight: bold;
@@ -312,8 +333,17 @@ footer .help {
 }
 
 #error a {
-    color: #549FDC;
     text-decoration: underline;
+}
+
+.forgot {
+  color: #777;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+}
+
+.forgot:hover {
+  color: #333;
 }
 
 

@@ -2,15 +2,15 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-  <a id="thisIsNotMe" class="emphasize" href="#"><%= gettext('This is not me...') %></a>
+
   <strong><%= gettext('Sign in using') %></strong>
 
   <div id="selectEmail" class="form_section">
       <ul class="inputs">
-          <% _.each(identities, function(item) { var emailAddress = item.address; var cleanedEmail = emailAddress.replace("@","_").replace(".", "_"); %>
+          <% _.each(identities, function(item, index) { var emailAddress = item.address, id = "email_" + index; %>
               <li>
-                  <label for="<%= cleanedEmail %>" class="serif<% if (emailAddress === siteemail) { %> preselected<% } %> selectable" title="<%= emailAddress %>">
-                    <input type="radio" name="email" id="<%= cleanedEmail %>" value="<%= emailAddress %>"
+                  <label for="<%= id %>" class="serif<% if (emailAddress === siteemail) { %> preselected<% } %> selectable" title="<%= emailAddress %>" >
+                    <input type="radio" name="email" id="<%= id %>" value="<%= emailAddress %>"
                         <% if (emailAddress === siteemail) { %> checked="checked" <% } %>
                       />
                     <%= emailAddress %>
@@ -18,18 +18,27 @@
               </li>
           <% }); %>
       </ul>
-      <a id="useNewEmail" class="emphasize" href="#"><%= gettext('Use a different email') %></a>
+      <a id="useNewEmail" class="emphasize" href="#"><%= gettext('Add another email') %></a>
+      <a id="thisIsNotMe" class="emphasize" href="#"><%= gettext('This is not me...') %></a>
+
 
       <div class="submit add cf">
+      <% if (privacy_url && tos_url) { %>
+        <p class="tospp">
+          <%= format(
+            gettext('By clicking %s, you confirm that you accept this site\'s <a %s>Terms of Use</a> and <a %s>Privacy Policy</a>.'),
+                    [ gettext('sign in'),
+                      format(' href="%s" target="_new"', [tos_url]),
+                      format(' href="%s" target="_new"', [privacy_url])
+                    ]) %>
+        </p>
+        <p>
+      <% } %>
 
-          <% if (allow_persistent) { %>
-            <label for="remember" class="selectable">
-              <input type="checkbox" id="remember" name="remember" <% if (remember) { %> checked="checked" <% } %> />
-              <%= gettext('Always sign in using this email') %>
-            </label>
-          <% } %>
-
-          <button id="signInButton"><%= gettext('sign in') %></button>
+        <button id="signInButton"><%= gettext('sign in') %></button>
+        <!--br style="clear: both" /-->
+      <% if (privacy_url && tos_url) { %>
+        </p>
+      <% } %>
       </div>
   </div>
-

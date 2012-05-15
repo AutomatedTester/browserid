@@ -1,365 +1,390 @@
-var json_locale_data = {
-   "client" : {
-      "Cancelling User Account" : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " eu",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "client": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-02-20 00:15+0200",
+         "Last-Translator": " Julen <julenx@gmail.com>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " eu",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "Plural-Forms": " nplurals=2; plural=(n != 1);",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "Always sign in using this email" : [
+      "BrowserID requires cookies": [
          null,
-         ""
+         "Barkatu, BrowserID-k cookie-ak behar ditu"
       ],
-      "Sync Keys for Address" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
          ""
       ],
-      "Syncing Email Addresses" : [
+      "Communication Error": [
          null,
-         ""
+         "Komunikazio-errorea"
       ],
-      "Unfortunately, BrowserID cannot communicate while offline!" : [
+      "Finishing Sign In...": [
          null,
-         ""
+         "Saio-hasiera amaitzen..."
       ],
-      "Sign in using" : [
+      "In just a moment you'll be signed into BrowserID.": [
          null,
-         ""
+         "Une batetik bestera hasiko duzu saioa BrowserID-n."
       ],
-      "Relay frame could not be found" : [
+      "Please wait a few seconds while we sign you into the site.": [
          null,
-         ""
+         "Itxaron segundo batzuk gunean saioa hasten dugun bitartean."
       ],
-      "Password" : [
+      "We are sorry, this request is taking a LOOONG time.": [
          null,
-         ""
+         "Sentitzen dugu, eskaera hau oso LUUUZE doa."
       ],
-      "We sent a confirmation email to <strong>%s</strong>" : [
+      "This message will go away when the request completes (hopefully soon). If you wait too long, close this window and try again.": [
          null,
-         ""
+         "Eskaera burutzean (laster espero dugu) desagertuko da mezu hau. Oso luze itxaroten baduzu, itxi leiho hau eta saiatu berriro."
       ],
-      "To finish signing in just click the verify link we sent to your email address." : [
+      "Sign in using": [
          null,
-         ""
+         "Hasi saioa hau erabiliz"
       ],
-      "Cancel" : [
+      "New email address": [
          null,
-         ""
+         "Helbide elektroniko berria"
       ],
-      "To verify that you own <strong id='primary_email'>%s</strong>, you must sign in with your provider.  This window will be redirected to" : [
+      "This field must be an email address.": [
          null,
-         ""
+         "Eremu honek helbide elektronikoa izan behar du"
       ],
-      "Authenticating with Assertion" : [
+      "The email field is required.": [
          null,
-         ""
+         "Helbide elektronikoaren eremua beharrezkoa da."
       ],
-      "Reset Password" : [
+      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again.": [
          null,
-         ""
+         "Mezu bat bidali berri dugu helbide horretara! Benetan beste bat bidaltzea nahi baduzu, itxaron minutu bat edo bi eta saiatu berriro."
       ],
-      "Resetting Password" : [
+      "That address is already added to your account!": [
          null,
-         ""
+         "Helbide hori dagoeneko gehituta dago zure kontuan!"
       ],
-      "Logout Failed" : [
+      "add": [
          null,
-         ""
+         "gehitu"
       ],
-      "Checking Email Address" : [
+      "cancel": [
          null,
-         ""
+         "utzi"
       ],
-      "To verify that you own this address, you must sign in with your provider.  This window will be redirected to" : [
+      "Email": [
          null,
-         ""
+         "Helbide elektronikoa"
       ],
-      "This is not me..." : [
+      "Enter your email address to sign in to <strong>%s</strong>": [
          null,
-         ""
+         "Idatzi zure helbide elektronikoa <strong>%s</strong> gunean saioa hasteko"
       ],
-      "We are sorry, BrowserID requires cookies" : [
+      "Welcome to BrowserID!": [
          null,
-         ""
+         "Ongi etorri BrowserID-ra!"
       ],
-      "In just a moment you'll be signed into BrowserID." : [
+      "This email looks new, so let's get you set up.": [
          null,
-         ""
+         "Helbide elektroniko honek berria dirudi; konfigura dezagun zure kontua."
       ],
-      "Getting Assertion" : [
+      "Password": [
          null,
-         ""
+         "Pasahitza"
       ],
-      "Completing User Registration" : [
+      "forgot your password?": [
          null,
-         ""
+         "pasahitza ahaztu duzu?"
       ],
-      "Registration Failed" : [
+      "The password field is required.": [
          null,
-         ""
+         "Pasahitzaren eremua beharrezkoa da."
       ],
-      "This message will go away when the request completes (hopefully soon).  If you wait too long, close this window and try again." : [
+      "The account cannot be logged in with this username and password.": [
          null,
-         ""
+         "Ezin da kontuaren saio-hasiera burutu erabiltzaile-izen eta pasahitz hauekin."
       ],
-      "translated text" : [
+      "By clicking %s, you confirm that you accept this site's <a %s>Terms of Use</a> and <a %s>Privacy Policy</a>.": [
          null,
          ""
       ],
-      "The email field is required." : [
+      "next": [
          null,
-         ""
+         "hurrengoa"
       ],
-      "New email address" : [
+      "verify email": [
          null,
-         ""
+         "egiaztatu helbide elektronikoa"
       ],
-      "verify email" : [
+      "sign in": [
          null,
-         ""
+         "hasi saioa"
       ],
-      "Checking if Cookies are Enabled" : [
+      "Cannot verify %s": [
          null,
-         ""
+         "Ezin da %s egiaztatu"
       ],
-      "Provisioning Unsupported Identity Provider" : [
+      "%s is a required address, but we cannot verify that you own this address.": [
          null,
-         ""
+         "%s beharrezko helbidea da baina ezin dugu egiaztatu zure jabetzakoa denik."
       ],
-      "That address is already added to your account!" : [
+      "Check your email!": [
          null,
-         ""
+         "Egiaztatu zure posta elektronikoa!"
       ],
-      "Authenticating with Identity Provider" : [
+      "We sent a confirmation email to <strong>%s</strong>": [
          null,
-         ""
+         "Berrespen-mezua bidali dugu <strong>%s</strong> helbidera"
       ],
-      "Remove Email Address from Account" : [
+      "To finish signing in just click the verify link we sent to your email address.": [
          null,
-         ""
+         "Saio-hasiera amaitzeko, egin klik zure helbide elektronikora bidali dugun egiaztapen-loturan."
       ],
-      "Communication Error" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"cancel\">cancel</a>.": [
          null,
-         ""
+         "Hau akatsa baldin bada, besterik gabe ezikusi bidalitako mezua eta <a href=\"#\" id=\"cancel\">utzi</a>."
       ],
-      "Provisioning with Identity Provider" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"back\">use another email address</a>.": [
          null,
-         ""
+         "Hau akatsa baldin bada, besterik gabe ezikusi bidalitako mezua eta <a href=\"#\" id=\"back\">erabili beste helbide elektroniko bat</a>."
       ],
-      "Adding Address" : [
+      "We are very sorry, the server is under extreme load!": [
          null,
-         ""
+         "Sentitzen dugu, zerbitzariak ikaragarrizko karga dauka!"
       ],
-      "Check your email!" : [
+      "We are very sorry, there has been an error!": [
          null,
-         ""
+         "Sentitzen dugu, errore bat gertatu da!"
       ],
-      "The site requested you sign in using" : [
+      "Please reload the page and try again.": [
          null,
-         ""
+         "Orria berritu beharko duzu berriro saiatzeko."
       ],
-      "Syncing Address" : [
+      "Please close this window and try again.": [
          null,
-         ""
+         "Leiho hau itxi beharko duzu berriro saiatzeko."
       ],
-      "Use a different email" : [
+      "See more info": [
          null,
-         ""
+         "Informazio gehiago"
       ],
-      "next" : [
+      "The site requested you sign in using": [
          null,
-         ""
+         "Ondorengoa erabiliz saioa has dezazun eskatu du guneak"
       ],
-      "Verifying email address" : [
+      "reset password": [
          null,
-         ""
+         "berrezarri pasahitza"
       ],
-      "Signup Failed" : [
+      "*%s* is not a valid email address!": [
          null,
-         ""
+         "*%s* ez da baliozko helbide elektronikoa!"
       ],
-      "This email looks new, so let&apos;s get you set up." : [
+      "To continue, please close the window and enter a valid address.": [
          null,
-         ""
+         "Jarraitzeko, itxi leihoa eta idatzi baliozko helbidea."
       ],
-      "Checking Script Version" : [
+      "This is not me...": [
          null,
-         ""
+         "Ez naiz ni..."
       ],
-      "You are offline!" : [
+      "Use a different email": [
          null,
-         ""
+         "Erabili beste helbide elektroniko bat"
       ],
-      "Unfortunately, the email address provided cannot act as a Primary Identity Provider" : [
+      "Always sign in using this email": [
          null,
-         ""
+         "Hasi saioa beti helbide elektroniko hau erabiliz"
       ],
-      "Checking Authentication" : [
+      "Address Verified!": [
          null,
-         ""
+         "Helbidea egiaztatuta!"
       ],
-      "Getting Token Info" : [
+      "Your identity has been verified with your email provider, we will now try to sign you in.": [
          null,
-         ""
+         "Zure identitatea egiaztatu egin da posta-hornitzailearekin, saioa hasten saiatuko gara orain."
       ],
-      "forgot your password?" : [
+      "You must sign in with your email provider to verify ownership of this address. This window will be redirected to": [
          null,
-         ""
+         "Zure posta-hornitzailearekin hasi behar duzu saioa helbide honen jabetza egiaztatzeko. Leiho hau hona berbideratuko da:"
       ],
-      "Address Verified!" : [
+      "verify": [
          null,
-         ""
+         "egiaztatu"
       ],
-      "This field must be an email address." : [
+      "Verify With Email Provider": [
          null,
-         ""
+         "Egiaztatu posta-hornitzailearekin"
       ],
-      "We are sorry, but we cannot communicate with BrowserID while you are offline." : [
+      "#~ \"BrowserID requires your browser's cookies to be enabled to operate. \"#~ \"Please enable your browser's cookies and try again\"": [
          null,
-         ""
+         "#~ \"BrowserID ibiltzeko nabigatzailearen cookie-ak gaituta egon behar dute. \"#~ \"Gaitu nabigatzailearen cookie-ak eta saiatu berriro\""
       ],
-      "Authenticating User" : [
+      "You are offline!": [
          null,
-         ""
+         "Lineaz kanpo zaude!"
       ],
-      "This email looks new, so let&#39;s get you set up." : [
+      "Unfortunately, BrowserID cannot communicate while offline!": [
          null,
-         ""
+         "BrowserID-k ezin du komunikatu lineaz kanpo badago!"
       ],
-      "Email" : [
+      "select email": [
          null,
-         ""
+         "hautatu helbide elektronikoa"
       ],
-      "Setting Password" : [
+      "#~ \"We are sorry, but we cannot communicate with BrowserID while you are \"#~ \"offline.\"": [
          null,
-         ""
+         "#~ \"Sentitzen dugu baina ezin dugu BrowserID-rekin komunikatu lineaz kanpo \"#~ \"zauden bitartean.\""
       ],
-      "Finishing Sign In..." : [
+      "Authenticating User": [
          null,
-         ""
+         "Erabiltzailea autentifikatzen"
       ],
-      "select email" : [
+      "Adding Address": [
          null,
-         ""
+         "Helbidea gehitzen"
       ],
-      "Checking Address Info" : [
+      "Adding Primary Email Address to User": [
          null,
-         ""
+         "Erabiltzaileari helbide elektroniko nagusia gehitzen"
       ],
-      "Adding Primary Email Address to User" : [
+      "Checking Address Info": [
          null,
-         ""
+         "Helbidearen informazioa egiaztatzen"
       ],
-      "Your identity has been verified with your email provider, we will now try to sign you in." : [
+      "Authenticating with Assertion": [
          null,
-         ""
+         "Baieztapenarekin autentifikatzen"
       ],
-      "Verify With Email Provider" : [
+      "Cancelling User Account": [
          null,
-         ""
+         "Erabiltzaile-kontua bertan behera uzten"
       ],
-      "Checking Whether User is Authenticated with IdP" : [
+      "Checking Authentication": [
          null,
-         ""
+         "Autentifikazioa egiaztatzen"
       ],
-      "Updating password" : [
+      "Checking Script Version": [
          null,
-         ""
+         "Script-aren bertsioa egiaztatzen"
       ],
-      "We just sent an email to that address!  If you really want to send another, wait a minute or two and try again." : [
+      "Completing User Registration": [
          null,
-         ""
+         "Erabiltzailearen erregistroa burutzen"
       ],
-      "The password field is required." : [
+      "Checking if Cookies are Enabled": [
          null,
-         ""
+         "Cookie-ak gaituta dauden egiaztatzen"
       ],
-      "cancel" : [
+      "Creating Account": [
          null,
-         ""
+         "Kontua sortzen"
       ],
-      "We had trouble communicating with your email provider, please try again!" : [
+      "Getting Assertion": [
          null,
-         ""
+         "Baieztapena eskuratzen"
       ],
-      "Creating Account" : [
+      "Checking Registration Token": [
          null,
-         ""
+         "Erregistratze-tokena egiaztatzen"
       ],
-      "We are sorry, this request is taking a LOOONG time." : [
+      "Checking Email Address": [
          null,
-         ""
+         "Helbide elektronikoa egiaztatzen"
       ],
-      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again." : [
+      "Checking Whether User is Authenticated with IdP": [
          null,
-         ""
+         "#~ \"Erabiltzailea identitate-hornitzailearekin autentifikatuta dagoen \"#~ \"egiaztatzen\""
       ],
-      "BrowserID requires your browser's cookies to be enabled to operate.  Please enable your browser's cookies and try again" : [
+      "Logout Failed": [
          null,
-         ""
+         "Saioa ixteak huts egin du"
       ],
-      "Checking Registration Token" : [
+      "Authenticating with Identity Provider": [
          null,
-         ""
+         "Identitate-hornitzailearekin autentifikatzen"
       ],
-      "add" : [
+      "#~ \"We had trouble communicating with your email provider, please try again!\"": [
          null,
-         ""
+         "#~ \"Arazoak izan ditugu zure posta elektronikoaren hornitzailearekin \"#~ \"komunikatzean, saiatu berriro mesedez!\""
       ],
-      "To continue, please close the window and enter a valid address." : [
+      "Provisioning with Identity Provider": [
          null,
-         ""
+         "Identitate-hornitzailearekin hornitzen"
       ],
-      "Enter your email address to sign in to <strong>%s</strong>" : [
+      "Provisioning Unsupported Identity Provider": [
          null,
-         ""
+         "Onartzen ez den identitate-hornitzailearekin hornitzen"
       ],
-      "Establishing Relay" : [
+      "#~ \"Unfortunately, the email address provided cannot act as a Primary \"#~ \"Identity Provider\"": [
          null,
-         ""
+         "#~ \"Emandako helbide elektronikoa ezin da identitate-hornitzaile nagusi gisa \"#~ \"erabili\""
       ],
-      "Signin Failed" : [
+      "Registration Failed": [
          null,
-         ""
+         "Erregistroak huts egin du"
       ],
-      "Verify" : [
+      "Establishing Relay": [
          null,
-         ""
+         "Helaraztea ezartzen"
       ],
-      "sign in" : [
+      "Relay frame could not be found": [
          null,
-         ""
+         "Ezin da helarazteko markoa aurkitu"
       ],
-      "The account cannot be logged in with this username and password." : [
+      "Resetting Password": [
          null,
-         ""
+         "Pasahitza berrezartzen"
       ],
-      "Welcome to BrowserID!" : [
+      "Remove Email Address from Account": [
          null,
-         ""
+         "Kendu helbide elektronikoa kontutik"
       ],
-      "If this is a mistake, just ignore the sent email and <a href=\"#\" class=\"cancelVerify\" id=\"back\">use another email address</a>." : [
+      "Setting Password": [
          null,
-         ""
+         "Pasahitza ezartzen"
       ],
-      "*%s* is not a valid email address!" : [
+      "Signin Failed": [
          null,
-         ""
+         "Saio-hasierak huts egin du"
       ],
-      "Please wait a few seconds while we sign you into the site." : [
+      "Signup Failed": [
          null,
-         ""
+         "Erregistroak huts egin du"
+      ],
+      "Syncing Address": [
+         null,
+         "Helbidea sinkronizatzen"
+      ],
+      "Syncing Email Addresses": [
+         null,
+         "Helbide elektronikoa sinkronizatzen"
+      ],
+      "Sync Keys for Address": [
+         null,
+         "Sinkronizatu helbidearen gakoak"
+      ],
+      "Getting Token Info": [
+         null,
+         "Tokenaren informazioa eskuratzen"
+      ],
+      "Updating password": [
+         null,
+         "Pasahitza eguneratzen"
+      ],
+      "Verifying email address": [
+         null,
+         "Helbide elektronikoa egiaztatzen"
+      ],
+      "Cancel": [
+         null,
+         "Utzi"
       ]
    }
 }

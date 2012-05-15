@@ -34,6 +34,20 @@
     equal("key", id.priv, "email that was added is retrieved");
   });
 
+  test("addPrimaryEmail", function() {
+    storage.addPrimaryEmail("testuser@testuser.com");
+
+    var email = storage.getEmail("testuser@testuser.com");
+    equal(email.type, "primary", "email type set correctly");
+  });
+
+  test("addSecondaryEmail", function() {
+    storage.addSecondaryEmail("testuser@testuser.com");
+
+    var email = storage.getEmail("testuser@testuser.com");
+    equal(email.type, "secondary", "email type set correctly");
+  });
+
   test("removeEmail, getEmails", function() {
     storage.addEmail("testuser@testuser.com", {priv: "key"});
     storage.removeEmail("testuser@testuser.com");
@@ -156,6 +170,46 @@
 
   test("getStagedOnBehalfOf", function() {
     // XXX needs a test
+  });
+
+  test("signInEmail.set/.get/.remove - set, get, and remove the signInEmail", function() {
+    storage.signInEmail.set("testuser@testuser.com");
+    equal(storage.signInEmail.get(), "testuser@testuser.com", "correct email gotten");
+    storage.signInEmail.remove();
+    equal(typeof storage.signInEmail.get(), "undefined", "after remove, signInEmail is empty");
+  });
+
+  test("push interaction data and get current", function() {
+    storage.interactionData.push({ foo: "bar" });
+    equal(storage.interactionData.current().foo, "bar",
+          "after pushing new interaction data, it's returned from .current()");
+  });
+
+  test("set interaction data overwrites current", function() {
+    storage.interactionData.clear();
+    storage.interactionData.push({ foo: "bar" });
+    storage.interactionData.setCurrent({ foo: "baz" });
+    equal(storage.interactionData.current().foo, "baz",
+          "overwriting current interaction data works");
+    equal(storage.interactionData.get().length, 1,
+          "overwriting doesn't append");
+  });
+
+  test("clear interaction data", function() {
+    storage.interactionData.push({ foo: "bar" });
+    storage.interactionData.push({ foo: "bar" });
+    storage.interactionData.clear();
+    equal(storage.interactionData.get().length, 0,
+          "after clearing, interaction data is zero length");
+  });
+
+  test("get interaction data returns all data", function() {
+    storage.interactionData.push({ foo: "old2" });
+    storage.interactionData.clear();
+    storage.interactionData.push({ foo: "old1" });
+    var d = storage.interactionData.get();
+    equal(d.length, 1, "get() returns complete unpublished data blobs");
+    equal(d[0].foo, 'old1', "get() returns complete unpublished data blobs");
   });
 }());
 

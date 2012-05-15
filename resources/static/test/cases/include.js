@@ -12,10 +12,17 @@
     equal(typeof navigator.id, "object", "navigator.id namespace is available");
   });
 
-  test("navigator.id.getVerifiedEmail is available", function() {
-    equal(typeof navigator.id.getVerifiedEmail, "function", "navigator.id.getVerifiedEmail is available");
+  test("expected public API functions available", function() {
+    _.each([
+      "get",
+      "getVerifiedEmail",
+      "logout",
+      "request",
+      "watch"
+    ], function(item, index) {
+      equal(typeof navigator.id[ item ], "function", "navigator.id." + item + " is available");
+    });
   });
-
 
 }());
 

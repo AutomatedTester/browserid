@@ -13,7 +13,7 @@
 
                 <li class="notification" id="unknown_secondary">
                   <strong id="unknown_email">Email</strong> is not registered.
-                  Would you like to <a class="signUpIn" href="/signup">sign up</a> instead?
+                  Would you like to <a class="action" href="/signup">sign up</a> instead?
                 </li>
 
             </ul>
@@ -35,11 +35,8 @@
 
               <ul class="inputs password_entry">
                 <li class="password_section">
-                    <label class="serif half" for="password">Password</label>
-                    <div class="half right">
-                        <!-- XXX: this needs to be fixed -->
-                        <a class="forgot" href="/forgot" tabindex="4">forgot your password?</a>
-                    </div>
+                    <a class="forgot right" href="/forgot" tabindex="4">forgot your password?</a>
+                    <label class="serif" for="password">Password</label>
                     <input class="sans" id="password" placeholder="Your Password" type="password" tabindex="2" maxlength="80">
 
                     <div id="password_required" class="tooltip" for="password">
@@ -50,7 +47,7 @@
 
             <div class="submit cf forminputs">
                 <div class="remember cf">
-                    <a class="signUpIn" href="/signup">New to BrowserID? Sign up today.</a>
+                    <a class="action" href="/signup">New to BrowserID? Sign up today.</a>
                 </div>
                 <button tabindex="5">Sign In</button>
             </div>

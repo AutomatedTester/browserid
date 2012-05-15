@@ -1,365 +1,374 @@
-var json_locale_data = {
-   "client" : {
-      "Cancelling User Account" : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " lt",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "client": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-02-24 17:12+0200",
+         "Last-Translator": " Rimas <rq@akl.lt>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " lt",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "Plural-Forms": " nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "Always sign in using this email" : [
+      "BrowserID requires cookies": [
          null,
-         ""
+         "Atsiprašome, bet „BrowserID“ veikimui būtini slapukai"
       ],
-      "Sync Keys for Address" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
          ""
       ],
-      "Syncing Email Addresses" : [
+      "Communication Error": [
          null,
-         ""
+         "Ryšio klaida"
       ],
-      "Unfortunately, BrowserID cannot communicate while offline!" : [
+      "Finishing Sign In...": [
          null,
-         ""
+         "Prisijungimas užbaigiamas…"
       ],
-      "Sign in using" : [
+      "In just a moment you'll be signed into BrowserID.": [
          null,
-         ""
+         "Už kelių akimirkų būsite prijungti prie „BrowserID“."
       ],
-      "Relay frame could not be found" : [
+      "Please wait a few seconds while we sign you into the site.": [
          null,
-         ""
+         "Luktelėkite keletą sekundžių, kol būsite prijungti prie svetainės."
       ],
-      "Password" : [
+      "We are sorry, this request is taking a LOOONG time.": [
          null,
-         ""
+         "Atsiprašome, ši užklausa trunka gerooookai ilgiau nei turėtų."
       ],
-      "We sent a confirmation email to <strong>%s</strong>" : [
+      "This message will go away when the request completes (hopefully soon). If you wait too long, close this window and try again.": [
          null,
-         ""
+         "Šis pranešimas turėtų išnykti, įvykdžius užklausą (tikimės, jog netrukus). Jeigu manote, jog laukiate jau per ilgai, užverkite šį langą ir bandykite iš naujo."
       ],
-      "To finish signing in just click the verify link we sent to your email address." : [
+      "Sign in using": [
          null,
-         ""
+         "Prisijungti naudojant"
       ],
-      "Cancel" : [
+      "New email address": [
          null,
-         ""
+         "Naujas el. pašto adresas"
       ],
-      "To verify that you own <strong id='primary_email'>%s</strong>, you must sign in with your provider.  This window will be redirected to" : [
+      "This field must be an email address.": [
          null,
-         ""
+         "Šio lauko reikšmė turi būti el. pašto adresas."
       ],
-      "Authenticating with Assertion" : [
+      "The email field is required.": [
          null,
-         ""
+         "El. paštą nurodyti būtina."
       ],
-      "Reset Password" : [
+      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again.": [
          null,
-         ""
+         "Šiuo adresu ką tik jau išsiuntėme laišką! Jeigu tikrai norite, kad išsiųstume dar vieną, luktelėkite porą minučių ir bandykite vėl."
       ],
-      "Resetting Password" : [
+      "That address is already added to your account!": [
          null,
-         ""
+         "Šis adresas jau pridėtas į Jūsų paskyrą!"
       ],
-      "Logout Failed" : [
+      "add": [
          null,
-         ""
+         "pridėti"
       ],
-      "Checking Email Address" : [
+      "cancel": [
          null,
-         ""
+         "atsisakyti"
       ],
-      "To verify that you own this address, you must sign in with your provider.  This window will be redirected to" : [
+      "Email": [
          null,
-         ""
+         "El. paštas"
       ],
-      "This is not me..." : [
+      "Enter your email address to sign in to <strong>%s</strong>": [
          null,
-         ""
+         "Įveskite savo el. pašto adresą, kad prisijungtumėte prie <strong>%s</strong>"
       ],
-      "We are sorry, BrowserID requires cookies" : [
+      "Welcome to BrowserID!": [
          null,
-         ""
+         "Sveiki! Čia – „BrowserID“!"
       ],
-      "In just a moment you'll be signed into BrowserID." : [
+      "This email looks new, so let's get you set up.": [
          null,
-         ""
+         "Šis el. pašto adresas mums atrodo naujas, tad pirmiausia sukonfigūruokime Jūsų paskyrą."
       ],
-      "Getting Assertion" : [
+      "Password": [
          null,
-         ""
+         "Slaptažodis"
       ],
-      "Completing User Registration" : [
+      "forgot your password?": [
          null,
-         ""
+         "Užmiršote slaptažodį?"
       ],
-      "Registration Failed" : [
+      "The password field is required.": [
          null,
-         ""
+         "Slaptažodį įvesti būtina."
       ],
-      "This message will go away when the request completes (hopefully soon).  If you wait too long, close this window and try again." : [
+      "The account cannot be logged in with this username and password.": [
          null,
-         ""
+         "Prisijungti prie paskyros su šiuo naudotojo vardu ir slaptažodžiu negalima."
       ],
-      "translated text" : [
+      "By clicking %s, you confirm that you accept this site's <a %s>Terms of Use</a> and <a %s>Privacy Policy</a>.": [
          null,
          ""
       ],
-      "The email field is required." : [
+      "next": [
          null,
-         ""
+         "toliau"
       ],
-      "New email address" : [
+      "verify email": [
          null,
-         ""
+         "patvirtinkite el. pašto adresą"
       ],
-      "verify email" : [
+      "sign in": [
          null,
-         ""
+         "prisijungti"
       ],
-      "Checking if Cookies are Enabled" : [
+      "Cannot verify %s": [
          null,
-         ""
+         "Nepavyko patvirtinti %s"
       ],
-      "Provisioning Unsupported Identity Provider" : [
+      "%s is a required address, but we cannot verify that you own this address.": [
          null,
-         ""
+         "Adresas %s yra būtinas, tačiau mums nepavyko patvirtinti, jog jis priklauso Jums."
       ],
-      "That address is already added to your account!" : [
+      "Check your email!": [
          null,
-         ""
+         "Pasitikrinkite savo el. paštą!"
       ],
-      "Authenticating with Identity Provider" : [
+      "We sent a confirmation email to <strong>%s</strong>": [
          null,
-         ""
+         "Adresu <strong>%s</strong> mes išsiuntėme patvirtinimo laišką."
       ],
-      "Remove Email Address from Account" : [
+      "To finish signing in just click the verify link we sent to your email address.": [
          null,
-         ""
+         "Kad užbaigtumėte registraciją, tiesiog atverkite Jums el. paštu išsiųstą el. pašto patvirtinimo saitą."
       ],
-      "Communication Error" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"cancel\">cancel</a>.": [
          null,
-         ""
+         "Jeigu tai klaida, galite tiesiog nepaisyti išsiųsto laiško ir <a href=\"#\" id=\"cancel\">nutraukti registraciją</a>."
       ],
-      "Provisioning with Identity Provider" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"back\">use another email address</a>.": [
          null,
-         ""
+         "Jeigu tai klaida, galite tiesiog nepaisyti išsiųsto laiško ir <a href=\"#\" id=\"cancel\">nurodyti kitą el. pašto adresą</a>."
       ],
-      "Adding Address" : [
+      "We are very sorry, the server is under extreme load!": [
          null,
-         ""
+         "Apgailestaujame, serveris šiuo metu perkrautas!"
       ],
-      "Check your email!" : [
+      "We are very sorry, there has been an error!": [
          null,
-         ""
+         "Apgailestaujame, tačiau įvyko klaida!"
       ],
-      "The site requested you sign in using" : [
+      "Please reload the page and try again.": [
          null,
-         ""
+         "Norėdami bandyti dar kartą, įkelkite šį tinklalapį iš naujo."
       ],
-      "Syncing Address" : [
+      "Please close this window and try again.": [
          null,
-         ""
+         "Norėdami bandyti dar kartą, užverkite šį langą."
       ],
-      "Use a different email" : [
+      "See more info": [
          null,
-         ""
+         "Išsamesnė informacija"
       ],
-      "next" : [
+      "The site requested you sign in using": [
          null,
-         ""
+         "Svetainė prašo prisijungti naudojant"
       ],
-      "Verifying email address" : [
+      "reset password": [
          null,
-         ""
+         "perkurti slaptažodį"
       ],
-      "Signup Failed" : [
+      "*%s* is not a valid email address!": [
          null,
-         ""
+         "*%s* nėra leistinas el. pašto adresas!"
       ],
-      "This email looks new, so let&apos;s get you set up." : [
+      "To continue, please close the window and enter a valid address.": [
          null,
-         ""
+         "Jeigu norite tęsti, užverkite šį langą ir įveskite galiojantį el. pašto adresą."
       ],
-      "Checking Script Version" : [
+      "This is not me...": [
          null,
-         ""
+         "Tai ne aš…"
       ],
-      "You are offline!" : [
+      "Use a different email": [
          null,
-         ""
+         "Naudoti kitą el. pašto adresą"
       ],
-      "Unfortunately, the email address provided cannot act as a Primary Identity Provider" : [
+      "Always sign in using this email": [
          null,
-         ""
+         "Visuomet prisijungti naudojantis šiuo el. pašto adresu"
       ],
-      "Checking Authentication" : [
+      "Address Verified!": [
          null,
-         ""
+         "Adresas patvirtintas!"
       ],
-      "Getting Token Info" : [
+      "Your identity has been verified with your email provider, we will now try to sign you in.": [
          null,
-         ""
+         "Jūsų tapatybė patvirtinta el. pašto teikėjo. Dabar pabandysime Jus prijungti."
       ],
-      "forgot your password?" : [
+      "You must sign in with your email provider to verify ownership of this address. This window will be redirected to": [
          null,
-         ""
+         "Kad patvirtintumėte, jog šis adresas priklauso Jums, turėsite prisijungti prie savo el. pašto paslaugos teikėjo. Šis langas netrukus bus nukreiptas adresu"
       ],
-      "Address Verified!" : [
+      "verify": [
          null,
-         ""
+         "patvirtinti"
       ],
-      "This field must be an email address." : [
+      "Verify With Email Provider": [
          null,
-         ""
+         "Patvirtinti per pašto paslaugos teikėją"
       ],
-      "We are sorry, but we cannot communicate with BrowserID while you are offline." : [
+      "#~ \"BrowserID requires your browser's cookies to be enabled to operate. \"#~ \"Please enable your browser's cookies and try again\"": [
          null,
-         ""
+         "#~ \"Kad „BrowserID“ veiktų, naršyklėje turi būti įgalinti slapukai. \"#~ \"Įgalinkite slapukus savo naršyklėje ir bandykite dar kartą.\""
       ],
-      "Authenticating User" : [
+      "You are offline!": [
          null,
-         ""
+         "Jūs nesate prisijungę prie tinklo!"
       ],
-      "This email looks new, so let&#39;s get you set up." : [
+      "Unfortunately, BrowserID cannot communicate while offline!": [
          null,
-         ""
+         "#~ \"Deja, „BrowserID“ tarnyba negali būti naudojama atsijungus nuo tinklo!\""
       ],
-      "Email" : [
+      "select email": [
          null,
-         ""
+         "išsirinkite el. pašto adresą"
       ],
-      "Setting Password" : [
+      "#~ \"We are sorry, but we cannot communicate with BrowserID while you are \"#~ \"offline.\"": [
          null,
-         ""
+         "#~ \"Apgailestaujame, bet susisiekti su „BrowserID“, kol nesate prisijungę \"#~ \"prie tinklo, negalima.\""
       ],
-      "Finishing Sign In..." : [
+      "Authenticating User": [
          null,
-         ""
+         "Nustatoma naudotojo tapatybė"
       ],
-      "select email" : [
+      "Adding Address": [
          null,
-         ""
+         "Pridedamas adresas"
       ],
-      "Checking Address Info" : [
+      "Adding Primary Email Address to User": [
          null,
-         ""
+         "Pridedamas pagrindinis naudotojo el. pašto adresas"
       ],
-      "Adding Primary Email Address to User" : [
+      "Checking Address Info": [
          null,
-         ""
+         "Tikrinama adreso informacija"
       ],
-      "Your identity has been verified with your email provider, we will now try to sign you in." : [
+      "Authenticating with Assertion": [
          null,
-         ""
+         "Su patvirtinimu nustatoma tapatybė"
       ],
-      "Verify With Email Provider" : [
+      "Cancelling User Account": [
          null,
-         ""
+         "Anuliuojama naudotojo paskyra"
       ],
-      "Checking Whether User is Authenticated with IdP" : [
+      "Checking Authentication": [
          null,
-         ""
+         "Tikrinamas tapatybės nustatymas"
       ],
-      "Updating password" : [
+      "Checking Script Version": [
          null,
-         ""
+         "Tikrinama scenarijaus versija"
       ],
-      "We just sent an email to that address!  If you really want to send another, wait a minute or two and try again." : [
+      "Completing User Registration": [
          null,
-         ""
+         "Užbaigiama naudotojo registracija"
       ],
-      "The password field is required." : [
+      "Checking if Cookies are Enabled": [
          null,
-         ""
+         "Tikrinama, ar įgalinti slapukai"
       ],
-      "cancel" : [
+      "Creating Account": [
          null,
-         ""
+         "Kuriama paskyra"
       ],
-      "We had trouble communicating with your email provider, please try again!" : [
+      "Getting Assertion": [
          null,
-         ""
+         "Gaunamas patvirtinimas"
       ],
-      "Creating Account" : [
+      "Checking Registration Token": [
          null,
-         ""
+         "Tikrinamas registracijos prieigos raktas"
       ],
-      "We are sorry, this request is taking a LOOONG time." : [
+      "Checking Email Address": [
          null,
-         ""
+         "Tikrinamas el. pašto adresas"
       ],
-      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again." : [
+      "Checking Whether User is Authenticated with IdP": [
          null,
-         ""
+         "Tikrinama, ar naudotojo tapatybė nustatyta per tapatybės teikėją"
       ],
-      "BrowserID requires your browser's cookies to be enabled to operate.  Please enable your browser's cookies and try again" : [
+      "Logout Failed": [
          null,
-         ""
+         "Atsijungti nepavyko"
       ],
-      "Checking Registration Token" : [
+      "Authenticating with Identity Provider": [
          null,
-         ""
+         "Nustatoma tapatybė per tapatybės teikėją"
       ],
-      "add" : [
+      "#~ \"We had trouble communicating with your email provider, please try again!\"": [
          null,
-         ""
+         "#~ \"Susisiekiant su Jūsų el. pašto paslaugos teikėju, įvyko klaida, Bandykite \"#~ \"dar kartą!\""
       ],
-      "To continue, please close the window and enter a valid address." : [
+      "#~ \"Unfortunately, the email address provided cannot act as a Primary \"#~ \"Identity Provider\"": [
          null,
-         ""
+         "#~ \"Deja, pateiktas el. pašto adresas negali būti naudojamas kaip pagrindinis \"#~ \"tapatybės teikėjas\""
       ],
-      "Enter your email address to sign in to <strong>%s</strong>" : [
+      "Registration Failed": [
          null,
-         ""
+         "Registracija nepavyko"
       ],
-      "Establishing Relay" : [
+      "Resetting Password": [
          null,
-         ""
+         "Perkuriamas slaptažodis"
       ],
-      "Signin Failed" : [
+      "Remove Email Address from Account": [
          null,
-         ""
+         "Pašalinti el. pašto adresą iš paskyros"
       ],
-      "Verify" : [
+      "Setting Password": [
          null,
-         ""
+         "Nustatomas slaptažodis"
       ],
-      "sign in" : [
+      "Signin Failed": [
          null,
-         ""
+         "Prisijungti nepavyko"
       ],
-      "The account cannot be logged in with this username and password." : [
+      "Signup Failed": [
          null,
-         ""
+         "Užsiregistruoti nepavyko"
       ],
-      "Welcome to BrowserID!" : [
+      "Syncing Address": [
          null,
-         ""
+         "Sinchronizuojamas adresas"
       ],
-      "If this is a mistake, just ignore the sent email and <a href=\"#\" class=\"cancelVerify\" id=\"back\">use another email address</a>." : [
+      "Syncing Email Addresses": [
          null,
-         ""
+         "Sinchronizuojami el. pašto adresai"
       ],
-      "*%s* is not a valid email address!" : [
+      "Sync Keys for Address": [
          null,
-         ""
+         "Sinchronizuoti adreso raktus"
       ],
-      "Please wait a few seconds while we sign you into the site." : [
+      "Getting Token Info": [
          null,
-         ""
+         "Gaunama prieigos rakto informacija"
+      ],
+      "Updating password": [
+         null,
+         "Keičiamas slaptažodis"
+      ],
+      "Verifying email address": [
+         null,
+         "Patvirtinamas slaptažodis"
+      ],
+      "Cancel": [
+         null,
+         "Atsisakyti"
       ]
    }
 }

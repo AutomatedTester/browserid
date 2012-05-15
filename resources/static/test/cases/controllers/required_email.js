@@ -95,6 +95,22 @@
   }
 
 
+  asyncTest("privacyURL and tosURL specified - show TOS/PP", function() {
+    var email = "registered@testuser.com";
+    xhr.useResult("known_secondary");
+
+    equal($(".tospp").length, 0, "tospp has not yet been added to the DOM");
+    createController({
+      email: "registered@testuser.com",
+      privacyURL: "http://testuser.com/priv.html",
+      tosURL: "http://testuser.com/tos.html",
+      ready: function() {
+        equal($(".tospp").length, 1, "tospp has been added to the DOM");
+        start();
+      }
+    });
+  });
+
   asyncTest("known_secondary: user who is not authenticated - show password form", function() {
     var email = "registered@testuser.com";
     xhr.useResult("known_secondary");
@@ -407,18 +423,18 @@
 
   });
 
-  asyncTest("verifyAddress of authenticated user, address belongs to another user - redirects to 'email_staged'", function() {
+  asyncTest("verifyAddress of authenticated user, secondary address belongs to another user - redirects to 'add_email_submit_with_secondary'", function() {
     var email = "registered@testuser.com";
     xhr.useResult("known_secondary");
 
-    testMessageReceived(email, "email_staged");
+    testMessageReceived(email, "add_email_submit_with_secondary");
   });
 
-  asyncTest("verifyAddress of authenticated user, unknown address - redirects to 'email_staged'", function() {
+  asyncTest("verifyAddress of authenticated user, unknown address - redirects to 'add_email_submit_with_secondary'", function() {
     var email = "unregistered@testuser.com";
     xhr.useResult("unknown_secondary");
 
-    testMessageReceived(email, "email_staged");
+    testMessageReceived(email, "add_email_submit_with_secondary");
   });
 
   asyncTest("verifyAddress of un-authenticated user, forgot password - redirect to 'forgot_password'", function() {
@@ -438,24 +454,7 @@
     });
   });
 
-  asyncTest("cancel normally raises the 'cancel' message", function() {
-    var email = "registered@testuser.com",
-        message = "cancel";
-
-    createController({
-      email: email,
-      ready: function() {
-        register(message, function(item, info) {
-          ok(true, message + " received");
-          start();
-        });
-
-        controller.cancel();
-      }
-    });
-  });
-
-  asyncTest("cancel with 'secondary_auth' raises the 'cancel_state' message", function() {
+  asyncTest("cancel raises the 'cancel_state' message", function() {
     var email = "registered@testuser.com",
         message = "cancel_state";
 

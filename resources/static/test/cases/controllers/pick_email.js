@@ -32,11 +32,9 @@
   });
 
 
-  function createController(allowPersistent) {
+  function createController() {
     controller = bid.Modules.PickEmail.create();
-    controller.start({
-      allow_persistent: allowPersistent || false
-    });
+    controller.start({});
   }
 
   test("multiple emails - print emails in alphabetical order", function() {
@@ -46,12 +44,10 @@
 
     createController();
 
-    var firstLI = $("#first_testuser_com").closest("li");
-    var secondLI = $("#second_testuser_com").closest("li");
-    var thirdLI = $("#third_testuser_com").closest("li");
-
-    equal(firstLI.next().is(secondLI), true, "first is before second");
-    equal(secondLI.next().is(thirdLI), true, "second is before third");
+    var inputs = $(".inputs input[type=radio]");
+    equal(inputs.eq(0).val(), "first@testuser.com", "correct email for the first element");
+    equal(inputs.eq(1).val(), "second@testuser.com", "correct email for the second element");
+    equal(inputs.eq(2).val(), "third@testuser.com", "correct email for the third element");
   });
 
   test("pickemail controller with email associated with site - check correct email", function() {
@@ -80,73 +76,25 @@
     equal(label.hasClass("preselected"), false, "the label has no class");
   });
 
-  function testRemember(allowPersistent, remember) {
-    storage.addEmail("testuser@testuser.com", {});
-    storage.addEmail("testuser2@testuser.com", {});
-    storage.site.set(testOrigin, "remember", remember);
-
-    createController(allowPersistent);
-
-    // remember can only be checked if allowPersistent is allowed
-    var rememberChecked = allowPersistent ? remember : false;
-
-    equal($("#remember").is(":checked"), rememberChecked, "remember should " + (rememberChecked ? "" : " not " ) + " be checked");
-  }
-
-  test("pickemail controller with allow_persistent and remember set to false", function() {
-    testRemember(false, false);
-  });
-
-  test("pickemail controller with allow_persistent set to false and remember set to true", function() {
-    testRemember(false, true);
-  });
-
-  test("pickemail controller with allow_persistent and remember set to true", function() {
-    testRemember(true, true);
-  });
-
-
-  asyncTest("signIn saves email, remember status to storage when allow_persistent set to true", function() {
+  asyncTest("signIn - trigger 'email_chosen message'", function() {
     storage.addEmail("testuser@testuser.com", {});
     storage.addEmail("testuser2@testuser.com", {});
 
-    createController(true);
+    createController();
 
     $("input[type=radio]").eq(0).trigger("click");
-    $("#remember").attr("checked", true);
 
     var assertion;
 
     register("email_chosen", function(msg, info) {
-      equal(storage.site.get(testOrigin, "email"), "testuser2@testuser.com", "email saved correctly");
-      equal(storage.site.get(testOrigin, "remember"), true, "remember saved correctly");
       ok(info.email, "email_chosen message triggered with email");
       start();
     });
     controller.signIn();
   });
 
-  asyncTest("signIn saves email, but not remember status when allow_persistent set to false", function() {
-    storage.addEmail("testuser@testuser.com", {});
-    storage.addEmail("testuser2@testuser.com", {});
-    storage.site.set(testOrigin, "remember", false);
-
-    createController(false);
-
-    $("input[type=radio]").eq(0).trigger("click");
-    $("#remember").attr("checked", true);
-
-    register("email_chosen", function(msg, info) {
-      equal(storage.site.get(testOrigin, "email"), "testuser2@testuser.com", "email saved correctly");
-      equal(storage.site.get(testOrigin, "remember"), false, "remember saved correctly");
-
-      start();
-    });
-    controller.signIn();
-  });
-
   asyncTest("addEmail triggers an 'add_email' message", function() {
-    createController(false);
+    createController();
 
     register("add_email", function(msg, info) {
       ok(true, "add_email triggered");
@@ -156,45 +104,48 @@
   });
 
   test("click on an email label and radio button - select corresponding radio button", function() {
-    storage.addEmail("testuser@testuser.com", {});
     storage.addEmail("testuser2@testuser.com", {});
+    storage.addEmail("testuser@testuser.com", {});
 
-    createController(false);
+    createController();
 
-    equal($("#testuser_testuser_com").is(":checked"), false, "radio button is not selected before click.");
+    equal($("#email_1").is(":checked"), false, "radio button is not selected before click.");
 
     // selects testuser@testuser.com
-    $("label[for=testuser_testuser_com]").trigger("click");
-    equal($("#testuser_testuser_com").is(":checked"), true, "radio button is correctly selected");
+    $(".inputs label:eq(1)").trigger("click");
+    equal($("#email_1").is(":checked"), true, "radio button is correctly selected");
 
     // selects testuser2@testuser.com
-    $("#testuser2_testuser_com").trigger("click");
-    equal($("#testuser2_testuser_com").is(":checked"), true, "radio button is correctly selected");
+    $(".inputs label:eq(0)").trigger("click");
+    equal($("#email_0").is(":checked"), true, "radio button is correctly selected");
   });
 
-  test("click on the 'Always sign in...' label and checkbox - correct toggling", function() {
-    createController(true);
+  test("click on an email label that contains a + - select corresponding radio button", function() {
+    storage.addEmail("testuser+test0@testuser.com", {});
+    storage.addEmail("testuser+test1@testuser.com", {});
 
-    var label = $("label[for=remember]"),
-        checkbox = $("#remember").removeAttr("checked");
+    createController();
 
-    equal(checkbox.is(":checked"), false, "checkbox is not yet checked");
+    equal($("#email_1").is(":checked"), false, "radio button is not selected before click.");
 
-    // toggle checkbox to on clicking on label
-    label.trigger("click");
-    equal(checkbox.is(":checked"), true, "checkbox is correctly checked");
+    // selects testuser+test1@testuser.com
+    $(".inputs label:eq(1)").trigger("click");
+    equal($("#email_1").is(":checked"), true, "radio button is correctly selected");
 
-    // toggle checkbox to off clicking on label
-    label.trigger("click");
-    equal(checkbox.is(":checked"), false, "checkbox is correctly unchecked");
+    // selects testuser+test0@testuser.com
+    $(".inputs label:eq(0)").trigger("click");
+    equal($("#email_0").is(":checked"), true, "radio button is correctly selected");
+  });
 
-    // toggle checkbox to on clicking on checkbox
-    checkbox.trigger("click");
-    equal(checkbox.is(":checked"), true, "checkbox is correctly checked");
+  asyncTest("click on not me button - trigger notme message", function() {
+    createController();
 
-    // toggle checkbox to off clicking on checkbox
-    checkbox.trigger("click");
-    equal(checkbox.is(":checked"), false, "checkbox is correctly unchecked");
+    register("notme", function(msg, info) {
+      ok(true, "notme triggered");
+      start();
+    });
+
+    $("#thisIsNotMe").click();
   });
 
 }());

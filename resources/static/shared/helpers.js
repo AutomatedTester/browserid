@@ -10,10 +10,16 @@
       validation = bid.Validation,
       helpers = bid.Helpers = bid.Helpers || {};
 
-  function extend(target, source) {
-    for(var key in source) {
-      target[key] = source[key];
+  function extend(target) {
+    var mixins = [].slice.call(arguments, 1);
+
+    for(var index = 0, mixin; mixin = mixins[index]; ++index) {
+      for(var key in mixin) {
+        target[key] = mixin[key];
+      }
     }
+
+    return target;
   }
 
   function getAndValidateEmail(target) {
@@ -58,6 +64,15 @@
     if(callback) {
       var args = [].slice.call(arguments, 1);
       callback.apply(null, args);
+    }
+  }
+
+  function log(msg) {
+    try {
+      window.console.log(msg);
+    } catch(e) {
+      // Catch all if console is not available or if it for some reason blows
+      // up. Do nothing.
     }
   }
 
@@ -110,7 +125,14 @@
      * parameter is a function.
      * @param {variant} [params] - parameters to pass to callback.
      */
-    complete: complete
+    complete: complete,
+
+    /**
+     * If the console is available, log a message to it.
+     * @method log
+     * @param {string} msg
+     */
+    log: log
   });
 
 

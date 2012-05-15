@@ -1,365 +1,386 @@
-var json_locale_data = {
-   "client" : {
-      "Cancelling User Account" : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " ja",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "client": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-03-03 14:06+0200",
+         "Last-Translator": " OHZEKI <saneyuki.s.snyk@gmail.com>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " ja",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "Plural-Forms": " nplurals=1; plural=0;",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "Always sign in using this email" : [
+      "BrowserID requires cookies": [
          null,
-         ""
+         "申し訳ありませんが、BrowserID を利用するには Cookie を有効にする必要があります"
       ],
-      "Sync Keys for Address" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
-         ""
+         "このウィンドウを閉じて、<a %s>Cookie を有効にしてから</a>再度試してください。"
       ],
-      "Syncing Email Addresses" : [
+      "Communication Error": [
          null,
-         ""
+         "通信エラー"
       ],
-      "Unfortunately, BrowserID cannot communicate while offline!" : [
+      "Finishing Sign In...": [
          null,
-         ""
+         "ログインが完了しました..."
       ],
-      "Sign in using" : [
+      "In just a moment you'll be signed into BrowserID.": [
          null,
-         ""
+         "間もなく BrowserID にログインします"
       ],
-      "Relay frame could not be found" : [
+      "Please wait a few seconds while we sign you into the site.": [
          null,
-         ""
+         "サイトへのログイン処理の間、数秒お待ちください"
       ],
-      "Password" : [
+      "We are sorry, this request is taking a LOOONG time.": [
          null,
-         ""
+         "申し訳ありません。このリクエストは非常に長い時間がかかっています"
       ],
-      "We sent a confirmation email to <strong>%s</strong>" : [
+      "This message will go away when the request completes (hopefully soon). If you wait too long, close this window and try again.": [
          null,
-         ""
+         "このメッセージはリクエストが完了した時に消えます (間もなく)。長い時間待っている場合は、このウィンドウを閉じて再び試してください。"
       ],
-      "To finish signing in just click the verify link we sent to your email address." : [
+      "Sign in using": [
          null,
-         ""
+         "ログイン情報の選択"
       ],
-      "Cancel" : [
+      "New email address": [
          null,
-         ""
+         "新しいメールアドレス"
       ],
-      "To verify that you own <strong id='primary_email'>%s</strong>, you must sign in with your provider.  This window will be redirected to" : [
+      "This field must be an email address.": [
          null,
-         ""
+         "この欄にはメールアドレスを入力してください。"
       ],
-      "Authenticating with Assertion" : [
+      "The email field is required.": [
          null,
-         ""
+         "メールアドレスの入力が必要です。"
       ],
-      "Reset Password" : [
+      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again.": [
          null,
-         ""
+         "このアドレスに確認のメールを送信しました！ 他のメールアドレスにしたいときは、数分待ってから再度行ってください。"
       ],
-      "Resetting Password" : [
+      "That address is already added to your account!": [
          null,
-         ""
+         "このアドレスは、すでにあなたのアカウントに追加されています！"
       ],
-      "Logout Failed" : [
+      "add": [
          null,
-         ""
+         "追加"
       ],
-      "Checking Email Address" : [
+      "cancel": [
          null,
-         ""
+         "キャンセル"
       ],
-      "To verify that you own this address, you must sign in with your provider.  This window will be redirected to" : [
+      "Email": [
          null,
-         ""
+         "メールアドレス"
       ],
-      "This is not me..." : [
+      "Enter your email address to sign in to <strong>%s</strong>": [
          null,
-         ""
+         "<strong>%s</strong> へのログインに使うメールアドレスを入力してください"
       ],
-      "We are sorry, BrowserID requires cookies" : [
+      "Welcome to BrowserID!": [
          null,
-         ""
+         "BrowserID にようこそ！"
       ],
-      "In just a moment you'll be signed into BrowserID." : [
+      "This email looks new, so let's get you set up.": [
          null,
-         ""
+         "新しいメールアドレスの場合は、設定を完了してください"
       ],
-      "Getting Assertion" : [
+      "Password": [
          null,
-         ""
+         "パスワード"
       ],
-      "Completing User Registration" : [
+      "forgot your password?": [
          null,
-         ""
+         "パスワードを忘れた場合"
       ],
-      "Registration Failed" : [
+      "The password field is required.": [
          null,
-         ""
+         "パスワードの入力が必要です。"
       ],
-      "This message will go away when the request completes (hopefully soon).  If you wait too long, close this window and try again." : [
+      "The account cannot be logged in with this username and password.": [
          null,
-         ""
+         "このユーザ名とパスワードではログインできません。"
       ],
-      "translated text" : [
+      "By clicking %s, you confirm that you accept this site's <a %s>Terms of Use</a> and <a %s>Privacy Policy</a>.": [
          null,
-         ""
+         "%s をクリックする前に、<a %s>利用規約</a>および<a %s>プライバシーポリシー</a>の確認と同意をお願いします。"
       ],
-      "The email field is required." : [
+      "next": [
          null,
-         ""
+         "次へ"
       ],
-      "New email address" : [
+      "verify email": [
          null,
-         ""
+         "メールアドレスを認証する"
       ],
-      "verify email" : [
+      "sign in": [
          null,
-         ""
+         "ログイン"
       ],
-      "Checking if Cookies are Enabled" : [
+      "Cannot verify %s": [
          null,
-         ""
+         "%s を認証できません"
       ],
-      "Provisioning Unsupported Identity Provider" : [
+      "%s is a required address, but we cannot verify that you own this address.": [
          null,
-         ""
+         "%s が要求されたメールアドレスですが、あなたのメールアドレスであると認証できません。"
       ],
-      "That address is already added to your account!" : [
+      "Check your email!": [
          null,
-         ""
+         "認証用のメールを確認してください"
       ],
-      "Authenticating with Identity Provider" : [
+      "We sent a confirmation email to <strong>%s</strong>": [
          null,
-         ""
+         "確認のためのメールを <strong>%s</strong> に送信しました。"
       ],
-      "Remove Email Address from Account" : [
+      "To finish signing in just click the verify link we sent to your email address.": [
          null,
-         ""
+         "私達から送られてきたメールに記載されている認証用のリンクを開き、登録を完了してください。"
       ],
-      "Communication Error" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"cancel\">cancel</a>.": [
          null,
-         ""
+         "これが間違いであった場合、送られてきたメールは無視して<a href=\"#\" id=\"cancel\">キャンセル</a>をお願いします。"
       ],
-      "Provisioning with Identity Provider" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"back\">use another email address</a>.": [
          null,
-         ""
+         "これが間違いであった場合、送られてきたメールを無視して、<a href=\"#\" id=\"back\">別のアドレスを使用してください</a>。"
       ],
-      "Adding Address" : [
+      "We are very sorry, the server is under extreme load!": [
          null,
-         ""
+         "申し訳ありません。サーバーが高負荷な状態です。"
       ],
-      "Check your email!" : [
+      "We are very sorry, there has been an error!": [
          null,
-         ""
+         "申し訳ありません。エラーが発生しました"
       ],
-      "The site requested you sign in using" : [
+      "Please reload the page and try again.": [
          null,
-         ""
+         "ページを再読み込みしてから、もう一度お試しください。"
       ],
-      "Syncing Address" : [
+      "Please close this window and try again.": [
          null,
-         ""
+         "一度ウィンドウを閉じて、再び試してください。"
       ],
-      "Use a different email" : [
+      "See more info": [
          null,
-         ""
+         "もっと詳しい情報を見る"
       ],
-      "next" : [
+      "The site requested you sign in using": [
          null,
-         ""
+         "サイトへのログインに使うアドレス"
       ],
-      "Verifying email address" : [
+      "reset password": [
          null,
-         ""
+         "パスワードのリセット"
       ],
-      "Signup Failed" : [
+      "*%s* is not a valid email address!": [
          null,
-         ""
+         "*%s* は正しいメールアドレスではありません！"
       ],
-      "This email looks new, so let&apos;s get you set up." : [
+      "To continue, please close the window and enter a valid address.": [
          null,
-         ""
+         "続けるには、ウィンドウを閉じて正しいアドレスを入力してください。"
       ],
-      "Checking Script Version" : [
+      "This is not me...": [
          null,
-         ""
+         "BrowserID をログアウト"
       ],
-      "You are offline!" : [
+      "Use a different email": [
          null,
-         ""
+         "別のメールアドレスをログインに使う"
       ],
-      "Unfortunately, the email address provided cannot act as a Primary Identity Provider" : [
+      "Always sign in using this email": [
          null,
-         ""
+         "常にこのメールアドレスをログインに使う"
       ],
-      "Checking Authentication" : [
+      "Address Verified!": [
          null,
-         ""
+         "アドレスが認証されました"
       ],
-      "Getting Token Info" : [
+      "Your identity has been verified with your email provider, we will now try to sign you in.": [
          null,
-         ""
+         "メールプロバイダによって、アドレスの所持者本人であることが認証されました。BrowserID へログインします。"
       ],
-      "forgot your password?" : [
+      "You must sign in with your email provider to verify ownership of this address. This window will be redirected to": [
          null,
-         ""
+         "メールプロバイダにログインし、このアドレスの所持者であることを認証しなければなりません。このウィンドウはリダイレクトされます。"
       ],
-      "Address Verified!" : [
+      "verify": [
          null,
-         ""
+         "認証"
       ],
-      "This field must be an email address." : [
+      "Verify With Email Provider": [
          null,
-         ""
+         "メールプロバイダによる認証"
       ],
-      "We are sorry, but we cannot communicate with BrowserID while you are offline." : [
+      "#~ \"BrowserID requires your browser's cookies to be enabled to operate. \"#~ \"Please enable your browser's cookies and try again\"": [
          null,
-         ""
+         "#~ \"BrowserID を利用するには、ブラウザの Cookie を有効にする必要があります。  \"#~ \"ブラウザの設定で Cookie を有効にして再度試してください。\""
       ],
-      "Authenticating User" : [
+      "You are offline!": [
          null,
-         ""
+         "現在、あなたはオフラインです！"
       ],
-      "This email looks new, so let&#39;s get you set up." : [
+      "Unfortunately, BrowserID cannot communicate while offline!": [
          null,
-         ""
+         "#~ \"申し訳ありませんが、BorwserID はオフラインモードでは利用できません！\""
       ],
-      "Email" : [
+      "select email": [
          null,
-         ""
+         "メールアドレスを選ぶ"
       ],
-      "Setting Password" : [
+      "#~ \"We are sorry, but we cannot communicate with BrowserID while you are \"#~ \"offline.\"": [
          null,
-         ""
+         "#~ \"申し訳ありません。オフライン状態にあるため BrowserID との通信ができませ\"#~ \"ん。\""
       ],
-      "Finishing Sign In..." : [
+      "Authenticating User": [
          null,
-         ""
+         "ユーザーを認証しています"
       ],
-      "select email" : [
+      "Adding Address": [
          null,
-         ""
+         "メールアドレスを追加しています"
       ],
-      "Checking Address Info" : [
+      "Adding Primary Email Address to User": [
          null,
-         ""
+         "ユーザーがメインで使うアドレスを追加しています"
       ],
-      "Adding Primary Email Address to User" : [
+      "Checking Address Info": [
          null,
-         ""
+         "メールアドレス情報を確認しています"
       ],
-      "Your identity has been verified with your email provider, we will now try to sign you in." : [
+      "Authenticating with Assertion": [
          null,
-         ""
+         "検証結果を元に認証しています"
       ],
-      "Verify With Email Provider" : [
+      "Cancelling User Account": [
          null,
-         ""
+         "あなたのユーザーアカウントを削除する"
       ],
-      "Checking Whether User is Authenticated with IdP" : [
+      "Checking Authentication": [
          null,
-         ""
+         "認証情報を確認しています"
       ],
-      "Updating password" : [
+      "Checking Script Version": [
          null,
-         ""
+         "スクリプトのバージョンを確認しています"
       ],
-      "We just sent an email to that address!  If you really want to send another, wait a minute or two and try again." : [
+      "Completing User Registration": [
          null,
-         ""
+         "ユーザーの登録が完了しました"
       ],
-      "The password field is required." : [
+      "Checking if Cookies are Enabled": [
          null,
-         ""
+         "Cookie が有効かどうか確認しています"
       ],
-      "cancel" : [
+      "Creating Account": [
          null,
-         ""
+         "アカウントを作成しています"
       ],
-      "We had trouble communicating with your email provider, please try again!" : [
+      "Getting Assertion": [
          null,
-         ""
+         "検証結果を取得しています"
       ],
-      "Creating Account" : [
+      "Checking Registration Token": [
          null,
-         ""
+         "登録トークンを確認しています"
       ],
-      "We are sorry, this request is taking a LOOONG time." : [
+      "Checking Email Address": [
          null,
-         ""
+         "メールアドレスを確認しています"
       ],
-      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again." : [
+      "Checking Whether User is Authenticated with IdP": [
          null,
-         ""
+         "ユーザが ID プロバイダで認証されているか確認しています"
       ],
-      "BrowserID requires your browser's cookies to be enabled to operate.  Please enable your browser's cookies and try again" : [
+      "Logout Failed": [
          null,
-         ""
+         "ログアウトに失敗しました"
       ],
-      "Checking Registration Token" : [
+      "Authenticating with Identity Provider": [
          null,
-         ""
+         "ID プロバイダ と認証しています"
       ],
-      "add" : [
+      "#~ \"We had trouble communicating with your email provider, please try again!\"": [
          null,
-         ""
+         "#~ \"あなたのメールプロバイダとの通信に問題が発生しました。もう一度やり直してく\"#~ \"ださい\""
       ],
-      "To continue, please close the window and enter a valid address." : [
+      "Provisioning with Identity Provider": [
          null,
-         ""
+         "ID プロバイダ を設定しています"
       ],
-      "Enter your email address to sign in to <strong>%s</strong>" : [
+      "Provisioning Unsupported Identity Provider": [
          null,
-         ""
+         "未サポートの ID プロバイダを設定しています"
       ],
-      "Establishing Relay" : [
+      "Registration Failed": [
          null,
-         ""
+         "登録に失敗しました"
       ],
-      "Signin Failed" : [
+      "Establishing Relay": [
          null,
-         ""
+         "中継を確立しています"
       ],
-      "Verify" : [
+      "Relay frame could not be found": [
          null,
-         ""
+         "ログインの中継フレームが見つかりません"
       ],
-      "sign in" : [
+      "Resetting Password": [
          null,
-         ""
+         "パスワードをリセットしています"
       ],
-      "The account cannot be logged in with this username and password." : [
+      "Remove Email Address from Account": [
          null,
-         ""
+         "アカウントからメールアドレスを削除する"
       ],
-      "Welcome to BrowserID!" : [
+      "Setting Password": [
          null,
-         ""
+         "パスワードを設定しています"
       ],
-      "If this is a mistake, just ignore the sent email and <a href=\"#\" class=\"cancelVerify\" id=\"back\">use another email address</a>." : [
+      "Signin Failed": [
          null,
-         ""
+         "ログインに失敗しました"
       ],
-      "*%s* is not a valid email address!" : [
+      "Signup Failed": [
          null,
-         ""
+         "サインアップに失敗しました"
       ],
-      "Please wait a few seconds while we sign you into the site." : [
+      "Syncing Address": [
          null,
-         ""
+         "アドレスを同期しています"
+      ],
+      "Syncing Email Addresses": [
+         null,
+         "メールアドレスを同期しています"
+      ],
+      "Sync Keys for Address": [
+         null,
+         "それぞれのアドレスと対になるキーを同期します"
+      ],
+      "Getting Token Info": [
+         null,
+         "トークン情報を取得しています"
+      ],
+      "Updating password": [
+         null,
+         "パスワードを更新しています"
+      ],
+      "Verifying email address": [
+         null,
+         "メールアドレスを検証しています"
+      ],
+      "Cancel": [
+         null,
+         "キャンセル"
       ]
    }
 }

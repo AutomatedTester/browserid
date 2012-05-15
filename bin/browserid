@@ -24,7 +24,7 @@ config = require('../lib/configuration.js'),
 heartbeat = require('../lib/heartbeat.js'),
 metrics = require('../lib/metrics.js'),
 logger = require('../lib/logging.js').logger,
-forward = require('../lib/http_forward'),
+forward = require('../lib/http_forward').forward,
 shutdown = require('../lib/shutdown'),
 views = require('../lib/browserid/views.js');
 
@@ -68,7 +68,8 @@ app.use(i18n.abide({
   supported_languages: config.get('supported_languages'),
   default_lang: config.get('default_lang'),
   debug_lang: config.get('debug_lang'),
-  locale_directory: config.get('locale_directory')
+  locale_directory: config.get('locale_directory'),
+  disable_locale_check: config.get('disable_locale_check')
 }));
 
 // limit all content bodies to 10kb, at which point we'll forcefully
@@ -135,9 +136,9 @@ app.use(function(req, resp, next) {
 
 var static_root = path.join(__dirname, "..", "resources", "static");
 
-app.use(cachify.setup(assets(config.get('supported_languages')), 
+app.use(cachify.setup(assets(config.get('supported_languages')),
         {
-          prefix: 'v',
+          prefix: config.get('cachify_prefix'),
           production: config.get('use_minified_resources'),
           root: static_root,
         }));

@@ -29,7 +29,7 @@ BrowserID.TestHelpers = (function() {
       }
       calls[msg] = true;
 
-      cb && cb(msg, info);
+      cb && cb.apply(null, arguments);
     }));
   }
 
@@ -45,6 +45,12 @@ BrowserID.TestHelpers = (function() {
     ok($("#error .contents").text().length, "contents have been written");
     ok($("#error #action").text().length, "action contents have been written");
     ok($("#error #network").text().length, "network contents have been written");
+  }
+
+  function clearStorage() {
+    for(var key in localStorage) {
+      localStorage.removeItem(key);
+    }
   }
 
   var TestHelpers = {
@@ -63,7 +69,7 @@ BrowserID.TestHelpers = (function() {
       transport.useResult("valid");
 
       network.init();
-      storage.clear();
+      clearStorage();
 
       $("body").stop().show();
       $("body")[0].className = "";
@@ -93,7 +99,7 @@ BrowserID.TestHelpers = (function() {
         time_until_delay: 10 * 1000
       });
       network.init();
-      storage.clear();
+      clearStorage();
       screens.wait.hide();
       screens.error.hide();
       screens.delay.hide();
@@ -191,7 +197,25 @@ BrowserID.TestHelpers = (function() {
         str += (i % 10);
       }
       return str;
+    },
+
+    testKeysInObject: function(objToTest, expected, msg) {
+      for(var i=0, key; key=expected[i]; ++i) {
+        ok(key in objToTest, msg || ("object contains " + key));
+      }
+    },
+
+    testObjectValuesEqual: function(objToTest, expected, msg) {
+      for(var key in expected) {
+        equal(objToTest[key], expected[key], key + " set to: " + expected[key] + (msg ? " - " + msg : ""));
+      }
+    },
+
+    testHasClass: function(selector, className, msg) {
+      ok($(selector).hasClass(className),
+          selector + " has className " + className + " - " + msg);
     }
+
   };
 
   return TestHelpers;

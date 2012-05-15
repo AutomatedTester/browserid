@@ -1,181 +1,190 @@
-var json_locale_data = {
-   "messages" : {
-      "Error encountered trying to complete registration." : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " ja",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "messages": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-03-03 14:07+0200",
+         "Last-Translator": " OHZEKI <saneyuki.s.snyk@gmail.com>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " ja",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "Plural-Forms": " nplurals=1; plural=0;",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "BrowserID" : [
+      "Complete Login to %s using BrowserID": [
          null,
-         ""
+         "BrowserID による %s へのログインが完了しました"
       ],
-      "Verification password is required." : [
+      "Error encountered while attempting to confirm your address. Have you previously verified this address?": [
          null,
-         ""
+         "メールアドレスの確認中にエラーが発生しました。このアドレスは検証済みではありませんか？"
       ],
-      "Finish signing into: " : [
+      "Error encountered trying to complete registration.": [
          null,
-         ""
+         "登録処理中にエラーが発生しました。"
       ],
-      "Your Email" : [
+      "Finish signing into:": [
          null,
-         ""
+         "右のサイトへのログインが完了しました："
       ],
-      "TOS" : [
+      "Email Verification": [
          null,
-         ""
+         "メールの検証"
       ],
-      "Need Help?" : [
+      "Email Address": [
          null,
-         ""
+         "メールアドレス"
       ],
-      "BrowserID: %s" : [
+      "Your Email": [
          null,
-         ""
+         "あなたのメールアドレス"
       ],
-      "Error comunicating with server." : [
+      "New Password": [
          null,
-         ""
+         "新しいパスワード"
       ],
-      "Last step!" : [
+      "Enter a Password": [
          null,
-         ""
+         "パスワードを入力してください"
       ],
-      "BrowserID is the fast and secure way to sign in &mdash; <a target=\"_blank\" href=\"/about\">learn more</a>" : [
+      "Password is required.": [
          null,
-         ""
+         "パスワードの入力が必要です。"
       ],
-      "Your new address is set up and you should now be signed in. You may now close this window and go back to" : [
+      "Password must be between 8 and 80 characters long.": [
          null,
-         ""
+         "パスワードの長さは 8 文字以上、80 文字以下でなければなりません。"
       ],
-      "Verify Password" : [
+      "Verify Password": [
          null,
-         ""
+         "パスワードの検証"
       ],
-      "BrowserID Home" : [
+      "Repeat Password": [
          null,
-         ""
+         "パスワード (確認のため再入力)"
       ],
-      "Password must be between 8 and 80 characters long." : [
+      "Verification password is required.": [
          null,
-         ""
+         "確認のパスワードの入力が必要です。"
       ],
-      "(A better way to sign in)" : [
+      "Passwords do not match.": [
          null,
-         ""
+         "パスワードが一致しません。"
       ],
-      "Finish registration by clicking this link:" : [
+      "finish": [
          null,
-         ""
+         "登録を完了"
       ],
-      "Thanks," : [
+      "<strong class=\"email\">Your address</strong> has been verified!": [
          null,
-         ""
+         "<strong class=\"email\">あなたのメールアドレス</strong>は検証されました！"
       ],
-      "Developers" : [
+      "Your new address is set up and you should now be signed in. You may now close this window and go back to": [
          null,
-         ""
+         "新たにセットアップされたメールアドレスでログインしてください。このウィンドウを閉じて戻ります: "
       ],
-      "Communicating with server" : [
+      "BrowserID requires cookies": [
          null,
-         ""
+         "BrowserID を使うには Cookie を有効にする必要があります"
       ],
-      "Enter a Password" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
-         ""
+         "ウィンドウを閉じて、<a %s>Cookie を有効にして</a> もう一度試してください"
       ],
-      "Error encountered while attempting to confirm your address. Have you previously verified this address?" : [
+      "Communicating with server": [
          null,
-         ""
+         "サーバと通信しています"
       ],
-      "Thank you for signing up with <strong>BrowserID</strong>. You can now use your <strong>BrowserID</strong> account to <em>Sign In</em> or <em>Sign Up</em> to websites all across the web!" : [
+      "Just a moment while we talk with the server.": [
          null,
-         ""
+         "サーバと通信している間、少々お待ちください。"
       ],
-      "Email Verification" : [
+      "BrowserID": [
          null,
-         ""
+         "BrowserID"
       ],
-      "<strong class=\"email\">Your address</strong> has been verified!" : [
+      "BrowserID is the fast and secure way to sign in &mdash; <a %s>learn more</a>": [
          null,
-         ""
+         "BroserID は速く安全なログイン手段です。&mdash; <a target=\"_blank\" href=\"/about\">詳しくはこちら</a>"
       ],
-      "Sign In" : [
+      "BrowserID: %s": [
          null,
-         ""
+         "BrowserID: %s"
       ],
-      "Finish" : [
+      "BrowserID Home": [
          null,
-         ""
+         "BrowserID ホーム"
       ],
-      "Browser ID" : [
+      "How it works": [
          null,
-         ""
+         "使い方"
       ],
-      "There was a problem with your signup link.  Has this address already been registered?" : [
+      "Developers": [
          null,
-         ""
+         "開発者向け資料"
       ],
-      "Passwords do not match." : [
+      "Sign In": [
          null,
-         ""
+         "ログイン"
       ],
-      "Password is required." : [
+      "Sign Out": [
          null,
-         ""
+         "ログアウト"
       ],
-      "By the <a href=\"%s\" target=\"_blank\">Identity Team</a> @ <a href=\"%s\" target=\"_blank\">Mozilla Labs</a>" : [
+      "By the <a %s>Identity Team</a> @ <a %s>Mozilla Labs</a>": [
          null,
-         ""
+         "By the <a href=\"%s\" target=\"_blank\">Identity Team</a> @ <a href=\"%s\" target=\"_blank\">Mozilla Labs</a>"
       ],
-      "New Password" : [
+      "Privacy": [
          null,
-         ""
+         "プライバシー"
       ],
-      "Complete Login to %s using BrowserID" : [
+      "TOS": [
          null,
-         ""
+         "サービス利用規約"
       ],
-      "How it works" : [
+      "Need Help?": [
          null,
-         ""
+         "ヘルプ"
       ],
-      "Privacy" : [
+      "There was a problem with your signup link. Has this address already been registered?": [
          null,
-         ""
+         "この登録確認用リンクには問題があります。このリンクが届いたメールアドレスは既に登録されていませんか？"
       ],
-      "Repeat Password" : [
+      "Error communicating with server.": [
          null,
-         ""
+         "サーバとの通信にエラーが発生しました。"
       ],
-      "Just a moment while we talk with the server." : [
+      "Last step!": [
          null,
-         ""
+         "パスワードを決める"
       ],
-      "Email Address" : [
+      "Thank you for signing up with <strong>BrowserID</strong>. You can now use your <strong>BrowserID</strong> account to <em>Sign In</em> or <em>Sign Up</em> to websites all across the web!": [
          null,
-         ""
+         "<strong>BrowserID</strong> のご登録ありがとうございます。あなたの <strong>BrowserID</strong> アカウントを使用して様々な Web サイトに <em>ログイン</em> または <em>アカウント登録</em> できます！"
       ],
-      "Sign Out" : [
+      "Thanks for verifying your email address. This message is being sent to you to complete your sign-in to %s.": [
          null,
-         ""
+         "メールアドレスの登録確認ありがとうございます。このメッセージは %s へのログインを完了するために送信されています。"
       ],
-      "If you are NOT trying to sign into this site, just ignore this email." : [
+      "Finish registration by clicking this link:": [
          null,
-         ""
+         "登録を完了するには、このリンクをクリックしてください:"
+      ],
+      "If you are NOT trying to sign into this site, just ignore this email.": [
+         null,
+         "このメールに心当たりがない場合、何も行わずにこのメールを破棄してください。"
+      ],
+      "Thanks,": [
+         null,
+         "登録ありがとうございます。"
+      ],
+      "(A better way to sign in)": [
+         null,
+         "ログインのためのより良い方法"
       ]
    }
 }

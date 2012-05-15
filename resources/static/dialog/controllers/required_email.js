@@ -20,7 +20,7 @@ BrowserID.Modules.RequiredEmail = (function() {
       secondaryAuth;
 
   function closePrimaryUser(callback) {
-    this.close("primary_user", _.extend(primaryInfo, {
+    this.close("primary_user", helpers.extend(primaryInfo, {
       email: email,
       requiredEmail: true,
       add: !!auth_level
@@ -91,7 +91,10 @@ BrowserID.Modules.RequiredEmail = (function() {
 
 
   function cancel() {
-    this.close(secondaryAuth ? "cancel_state" : "cancel");
+    // The cancel button is only shown to a user who has to enter their
+    // password to go from "assertion" authentication to "password"
+    // authentication.
+    this.close("cancel_state");
   }
 
   var RequiredEmail = bid.Modules.PageModule.extend({
@@ -116,6 +119,7 @@ BrowserID.Modules.RequiredEmail = (function() {
         // a user could not be looking at stale data and/or authenticate as
         // somebody else.
         var emailInfo = user.getStoredEmailKeypair(email);
+        //alert(auth_level + ' ' + JSON.stringify(emailInfo) + JSON.stringify(options));
         if(emailInfo && emailInfo.type === "secondary") {
           // secondary user, show the password field if they are not
           // authenticated to the "password" level.
@@ -171,16 +175,19 @@ BrowserID.Modules.RequiredEmail = (function() {
         }
       }, self.getErrorDialog(errors.checkAuthentication, ready));
 
-      function showTemplate(options) {
-        options = _.extend({
+      function showTemplate(templateData) {
+        templateData = helpers.extend({
           email: email,
           verify: false,
           signin: false,
           password: false,
           secondary_auth: false,
-          primary: false
-        }, options);
-        self.renderDialog("required_email", options);
+          primary: false,
+          privacy_url: options.privacyURL || null,
+          tos_url: options.tosURL || null
+        }, templateData);
+
+        self.renderDialog("required_email", templateData);
 
         self.click("#sign_in", signIn);
         self.click("#verify_address", verifyAddress);

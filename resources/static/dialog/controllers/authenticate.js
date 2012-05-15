@@ -17,7 +17,8 @@ BrowserID.Modules.Authenticate = (function() {
       complete = helpers.complete,
       dom = bid.DOM,
       lastEmail = "",
-      addressInfo;
+      addressInfo,
+      hints = ["returning","start","addressInfo"];
 
   function getEmail() {
     return helpers.getAndValidateEmail("#email");
@@ -31,7 +32,7 @@ BrowserID.Modules.Authenticate = (function() {
       enterPasswordState.call(self, info.ready);
     }
     else {
-      animateSwap(".newuser,.forgot,.returning", ".start");
+      showHint("start");
       complete(info.ready);
     }
   }
@@ -46,6 +47,7 @@ BrowserID.Modules.Authenticate = (function() {
       onAddressInfo(info);
     }
     else {
+      showHint("addressInfo");
       user.addressInfo(email, onAddressInfo,
         self.getErrorDialog(errors.addressInfo));
     }
@@ -59,7 +61,7 @@ BrowserID.Modules.Authenticate = (function() {
       else if(info.known) {
         enterPasswordState.call(self);
       } else {
-        createSecondaryUserState.call(self);
+        createSecondaryUser.call(self);
       }
     }
   }
@@ -69,9 +71,9 @@ BrowserID.Modules.Authenticate = (function() {
         email = getEmail();
 
     if (email) {
-      dialogHelpers.createUser.call(self, email, callback);
+      self.close("new_user", { email: email }, { email: email });
     } else {
-      callback && callback();
+      complete(callback);
     }
   }
 
@@ -91,16 +93,20 @@ BrowserID.Modules.Authenticate = (function() {
     }
   }
 
-  function animateSwap(fadeOutSelector, fadeInSelector, callback) {
-    // XXX instead of using jQuery here, think about using CSS animations.
-    $(fadeOutSelector).hide();
-    $(fadeInSelector).fadeIn(ANIMATION_TIME, callback);
+  function showHint(showSelector, callback) {
+    _.each(hints, function(className) {
+      if(className != showSelector) {
+        $("." + className).not("." + showSelector).hide();
+      }
+    });
+
+    $("." + showSelector).fadeIn(ANIMATION_TIME, callback);
   }
 
   function enterEmailState(el) {
     if (!$("#email").is(":disabled")) {
       this.submit = checkEmail;
-      animateSwap(".returning:visible,.newuser:visible", ".start");
+      showHint("start");
     }
   }
 
@@ -109,7 +115,7 @@ BrowserID.Modules.Authenticate = (function() {
 
     self.publish("enter_password", addressInfo);
     self.submit = authenticate;
-    animateSwap(".start:visible,.newuser:visible,.forgot:visible", ".returning", function() {
+    showHint("returning", function() {
       dom.focus("#password");
     });
     complete(callback);
@@ -122,15 +128,6 @@ BrowserID.Modules.Authenticate = (function() {
       this.close("forgot_password", info, info );
     }
   }
-
-  function createSecondaryUserState() {
-    var self=this;
-
-    self.publish("create_user");
-    self.submit = createSecondaryUser;
-    animateSwap(".start:visible,.returning:visible", ".newuser");
-  }
-
 
   function emailKeyUp() {
     var newEmail = dom.getInner("#email");
@@ -150,10 +147,12 @@ BrowserID.Modules.Authenticate = (function() {
       var self=this;
       self.renderDialog("authenticate", {
         sitename: user.getHostname(),
-        email: lastEmail
+        email: lastEmail,
+        privacy_url: options.privacyURL,
+        tos_url: options.tosURL
       });
 
-      $(".newuser,.forgot,.returning,.start").hide();
+      $(".returning,.start").hide();
 
       self.bind("#email", "keyup", emailKeyUp);
       self.click("#forgotPassword", forgotPassword);

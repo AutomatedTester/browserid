@@ -1,365 +1,350 @@
-var json_locale_data = {
-   "client" : {
-      "Cancelling User Account" : [
-         null,
-         ""
-      ],
-      "" : {
-         "MIME-Version" : " 1.0",
-         "X-Generator" : " Translate Toolkit 1.9.0",
-         "POT-Creation-Date" : " 2012-01-26 17:37-0800",
-         "Language" : " rm",
-         "Last-Translator" : " FULL NAME <EMAIL@ADDRESS>",
-         "Content-Type" : " text/plain; charset=UTF-8",
-         "PO-Revision-Date" : " YEAR-MO-DA HO:MI+ZONE",
-         "Language-Team" : " LANGUAGE <LL@li.org>",
-         "Content-Transfer-Encoding" : " 8bit",
-         "Report-Msgid-Bugs-To" : " ",
-         "Project-Id-Version" : " PACKAGE VERSION"
+;var json_locale_data = {
+   "client": {
+      "": {
+         "Project-Id-Version": " PACKAGE VERSION",
+         "Report-Msgid-Bugs-To": " ",
+         "POT-Creation-Date": " 2012-03-02 15:24+0100",
+         "PO-Revision-Date": " 2012-02-27 23:38+0200",
+         "Last-Translator": " Gion-Andri <gion-andri@gmx.ch>",
+         "Language-Team": " LANGUAGE <LL@li.org>",
+         "Language": " rm",
+         "MIME-Version": " 1.0",
+         "Content-Type": " text/plain; charset=UTF-8",
+         "Content-Transfer-Encoding": " 8bit",
+         "Plural-Forms": " nplurals=2; plural=(n != 1) ;",
+         "X-Generator": " Pootle 2.1.6"
       },
-      "Always sign in using this email" : [
+      "BrowserID requires cookies": [
          null,
-         ""
-      ],
-      "Sync Keys for Address" : [
-         null,
-         ""
-      ],
-      "Syncing Email Addresses" : [
-         null,
-         ""
-      ],
-      "Unfortunately, BrowserID cannot communicate while offline!" : [
-         null,
-         ""
+         "Perstgisa, ma BrowserID utilisescha cookies"
       ],
-      "Sign in using" : [
+      "Please close this window, <a %s>enable cookies</a> and try again": [
          null,
          ""
       ],
-      "Relay frame could not be found" : [
+      "Communication Error": [
          null,
-         ""
+         "Errur da communicaziun"
       ],
-      "Password" : [
+      "Finishing Sign In...": [
          null,
-         ""
+         "Terminar da s'annunziar"
       ],
-      "We sent a confirmation email to <strong>%s</strong>" : [
+      "In just a moment you'll be signed into BrowserID.": [
          null,
-         ""
+         "En curt mument vegns ti ad esser s'annunzià tar BrowserID."
       ],
-      "To finish signing in just click the verify link we sent to your email address." : [
+      "Please wait a few seconds while we sign you into the site.": [
          null,
-         ""
+         "Spetga in per secundas enfin nus t'annunziain tar la pagina."
       ],
-      "Cancel" : [
+      "We are sorry, this request is taking a LOOONG time.": [
          null,
-         ""
+         "Perstgisa, questa dumonda dura FITG ditg."
       ],
-      "To verify that you own <strong id='primary_email'>%s</strong>, you must sign in with your provider.  This window will be redirected to" : [
+      "This message will go away when the request completes (hopefully soon). If you wait too long, close this window and try again.": [
          null,
-         ""
+         "Quest messadi sparescha sche la dumonda è cumplettada (speranza prest). Sche ti spetgas gia memia ditg, serra la fanestra ed emprova danovamain."
       ],
-      "Authenticating with Assertion" : [
+      "Sign in using": [
          null,
-         ""
+         "S'annunziar cun"
       ],
-      "Reset Password" : [
+      "New email address": [
          null,
-         ""
+         "Nova adressa dad e-mail"
       ],
-      "Resetting Password" : [
+      "This field must be an email address.": [
          null,
-         ""
+         "Quest champ sto esser ina adressa dad e-mail."
       ],
-      "Logout Failed" : [
+      "The email field is required.": [
          null,
-         ""
+         "Il champ dad e-mail è necessari."
       ],
-      "Checking Email Address" : [
+      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again.": [
          null,
-         ""
+         "Nus avain gist tramess in e-mail a questa adressa. Sche ti vuls propi trametter anc in, spetga ina minuta u duas ed emprova danovamain."
       ],
-      "To verify that you own this address, you must sign in with your provider.  This window will be redirected to" : [
+      "That address is already added to your account!": [
          null,
-         ""
+         "Questa adressa è gia agiuntada a tes conto!"
       ],
-      "This is not me..." : [
+      "add": [
          null,
-         ""
+         "agiuntar"
       ],
-      "We are sorry, BrowserID requires cookies" : [
+      "cancel": [
          null,
-         ""
+         "interrumper"
       ],
-      "In just a moment you'll be signed into BrowserID." : [
+      "Email": [
          null,
-         ""
+         "E-mail"
       ],
-      "Getting Assertion" : [
+      "Enter your email address to sign in to <strong>%s</strong>": [
          null,
-         ""
+         "Endatescha tia adressa dad e-mail per s'annunziar tar <strong>%s</strong>"
       ],
-      "Completing User Registration" : [
+      "Welcome to BrowserID!": [
          null,
-         ""
+         "Bainvegni tar BrowserID!"
       ],
-      "Registration Failed" : [
+      "This email looks new, so let's get you set up.": [
          null,
-         ""
+         "Questa adressa dad e-mail para nova, lain registrar ella."
       ],
-      "This message will go away when the request completes (hopefully soon).  If you wait too long, close this window and try again." : [
+      "Password": [
          null,
-         ""
+         "Pled-clav"
       ],
-      "translated text" : [
+      "forgot your password?": [
          null,
-         ""
+         "Emblidà il pled-clav?"
       ],
-      "The email field is required." : [
+      "The password field is required.": [
          null,
-         ""
+         "Il champ da pled-clav è necessari."
       ],
-      "New email address" : [
+      "The account cannot be logged in with this username and password.": [
          null,
-         ""
+         "Ti na pos betg t'annunziar tar quest conto cun quest num d'utilisader e quest pled-clav."
       ],
-      "verify email" : [
+      "By clicking %s, you confirm that you accept this site's <a %s>Terms of Use</a> and <a %s>Privacy Policy</a>.": [
          null,
          ""
       ],
-      "Checking if Cookies are Enabled" : [
+      "next": [
          null,
-         ""
+         "enavant"
       ],
-      "Provisioning Unsupported Identity Provider" : [
+      "verify email": [
          null,
-         ""
+         "verifitgar l'adressa dad e-mail"
       ],
-      "That address is already added to your account!" : [
+      "sign in": [
          null,
-         ""
+         "s'annunziar"
       ],
-      "Authenticating with Identity Provider" : [
+      "Cannot verify %s": [
          null,
-         ""
+         "Impussibel da verifitgar %s"
       ],
-      "Remove Email Address from Account" : [
+      "%s is a required address, but we cannot verify that you own this address.": [
          null,
-         ""
+         "%s è ina adressa necessaria, ma nus na pudain betg verifitgar che ti possedas ella."
       ],
-      "Communication Error" : [
+      "Check your email!": [
          null,
-         ""
+         "Legia tes e-mails!"
       ],
-      "Provisioning with Identity Provider" : [
+      "We sent a confirmation email to <strong>%s</strong>": [
          null,
-         ""
+         "Nus avain tramess in e-mail da confermaziun a <strong>%s</strong>"
       ],
-      "Adding Address" : [
+      "To finish signing in just click the verify link we sent to your email address.": [
          null,
-         ""
+         "Per terminar il process da registraziun, clicca simplamain sin la colliaziun che nus t'avain tramess per e-mail."
       ],
-      "Check your email!" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"cancel\">cancel</a>.": [
          null,
-         ""
+         "Sch'i sa tracta d'in sbagl, ignorescha l'e-mail tramess ed <a href=\"#\" id=\"cancel\">interrumpa</a>."
       ],
-      "The site requested you sign in using" : [
+      "If this is a mistake, just ignore the sent email and <a href=\"#\" id=\"back\">use another email address</a>.": [
          null,
-         ""
+         "Sch'i sa tracta d'in sbagl, ignorescha l'e-mail tramess ed <a href=\"#\" id=\"back\">utilisescha ina autra adressa d'e-mail</a>."
       ],
-      "Syncing Address" : [
+      "We are very sorry, the server is under extreme load!": [
          null,
-         ""
+         "Perstgisa, noss servers èn surchargiads!"
       ],
-      "Use a different email" : [
+      "We are very sorry, there has been an error!": [
          null,
-         ""
+         "Perstgisa, ma ina errur è capitada!"
       ],
-      "next" : [
+      "Please reload the page and try again.": [
          null,
-         ""
+         "Per cuntinuar stos ti rechargiar la pagina ed empruvar danovamain."
       ],
-      "Verifying email address" : [
+      "Please close this window and try again.": [
          null,
-         ""
+         "Per cuntinuar, serra p.pl. la fanestra ed emprova danovamain."
       ],
-      "Signup Failed" : [
+      "See more info": [
          null,
-         ""
+         "Mussar dapli infurmaziuns"
       ],
-      "This email looks new, so let&apos;s get you set up." : [
+      "The site requested you sign in using": [
          null,
-         ""
+         "La pagina dumonda che ti t'annunzias cun"
       ],
-      "Checking Script Version" : [
+      "reset password": [
          null,
-         ""
+         "Redefinir il pled-clav"
       ],
-      "You are offline!" : [
+      "*%s* is not a valid email address!": [
          null,
-         ""
+         "*%s* n'è betg ina adressa dad e-mail valida!"
       ],
-      "Unfortunately, the email address provided cannot act as a Primary Identity Provider" : [
+      "To continue, please close the window and enter a valid address.": [
          null,
-         ""
+         "Per cuntinuar, serra p.pl. la fanestra ed endatescha ina adressa valida."
       ],
-      "Checking Authentication" : [
+      "This is not me...": [
          null,
-         ""
+         "Quai na sun betg jau…"
       ],
-      "Getting Token Info" : [
+      "Use a different email": [
          null,
-         ""
+         "Utilisar in'autra adressa dad e-mail"
       ],
-      "forgot your password?" : [
+      "Always sign in using this email": [
          null,
-         ""
+         "Adina s'annunziar cun questa adressa dad e-mail"
       ],
-      "Address Verified!" : [
+      "Address Verified!": [
          null,
-         ""
+         "Verifitgà l'adressa."
       ],
-      "This field must be an email address." : [
+      "Your identity has been verified with your email provider, we will now try to sign you in.": [
          null,
-         ""
+         "Tia identitad è vegnida verifitgada cun tes provider dad e-mail. Nus empruvain ussa dad annunziar tai."
       ],
-      "We are sorry, but we cannot communicate with BrowserID while you are offline." : [
+      "You must sign in with your email provider to verify ownership of this address. This window will be redirected to": [
          null,
-         ""
+         "Ti stos s'annunziar tar tes provider dad e-mail per verifitgar che ti possedas questa adressa. Questa fanestra vegn renviada a"
       ],
-      "Authenticating User" : [
+      "verify": [
          null,
-         ""
+         "Verifitgar"
       ],
-      "This email looks new, so let&#39;s get you set up." : [
+      "Verify With Email Provider": [
          null,
-         ""
+         "Verifitgar cun il provider dad e-mails"
       ],
-      "Email" : [
+      "#~ \"BrowserID requires your browser's cookies to be enabled to operate. \"#~ \"Please enable your browser's cookies and try again\"": [
          null,
-         ""
+         "#~ \"Per che BrowserID funcziunescha correctamain èsi necessari che cookies èn \"#~ \"activads en tes navigatur. Activescha p.pl. ils cookies ed emprova \"#~ \"danovamain.\""
       ],
-      "Setting Password" : [
+      "You are offline!": [
          null,
-         ""
+         "Ti es offline!"
       ],
-      "Finishing Sign In..." : [
+      "Unfortunately, BrowserID cannot communicate while offline!": [
          null,
-         ""
+         "#~ \"Deplorablamain na po BrowserID betg communitgar sche ti es en il modus \"#~ \"offline.\""
       ],
-      "select email" : [
+      "select email": [
          null,
-         ""
+         "tscherner l'adressa dad e-mail"
       ],
-      "Checking Address Info" : [
+      "#~ \"We are sorry, but we cannot communicate with BrowserID while you are \"#~ \"offline.\"": [
          null,
-         ""
+         "#~ \"Perstgisa, ma nus na pudain betg communitgar cun BrowserID durant che ti \"#~ \"es offline.\""
       ],
-      "Adding Primary Email Address to User" : [
+      "Authenticating User": [
          null,
-         ""
+         "Autentifitgar l'utilisader"
       ],
-      "Your identity has been verified with your email provider, we will now try to sign you in." : [
+      "Adding Address": [
          null,
-         ""
+         "Agiuntar ina adressa"
       ],
-      "Verify With Email Provider" : [
+      "Adding Primary Email Address to User": [
          null,
-         ""
+         "Agiuntar ina adressa dad e-mail principala a l'utilisader"
       ],
-      "Checking Whether User is Authenticated with IdP" : [
+      "Checking Address Info": [
          null,
-         ""
+         "Controlla da las infurmaziuns d'adressa"
       ],
-      "Updating password" : [
+      "Cancelling User Account": [
          null,
-         ""
+         "Il conto d'utilisader vegn allontanà"
       ],
-      "We just sent an email to that address!  If you really want to send another, wait a minute or two and try again." : [
+      "Checking Authentication": [
          null,
-         ""
+         "Controllar l'autentificaziun"
       ],
-      "The password field is required." : [
+      "Checking Script Version": [
          null,
-         ""
+         "Controllar la versiun dal script"
       ],
-      "cancel" : [
+      "Completing User Registration": [
          null,
-         ""
+         "Cumpletar la registraziun da l'utilisader"
       ],
-      "We had trouble communicating with your email provider, please try again!" : [
+      "Checking if Cookies are Enabled": [
          null,
-         ""
+         "Controllar sche cookies èn activads"
       ],
-      "Creating Account" : [
+      "Creating Account": [
          null,
-         ""
+         "Crear in conto"
       ],
-      "We are sorry, this request is taking a LOOONG time." : [
+      "Checking Registration Token": [
          null,
-         ""
+         "Controllar il token da registraziun"
       ],
-      "We just sent an email to that address! If you really want to send another, wait a minute or two and try again." : [
+      "Checking Email Address": [
          null,
-         ""
+         "Controllar l'adressa dad e-mail"
       ],
-      "BrowserID requires your browser's cookies to be enabled to operate.  Please enable your browser's cookies and try again" : [
+      "Logout Failed": [
          null,
-         ""
+         "Errur cun partir"
       ],
-      "Checking Registration Token" : [
+      "Registration Failed": [
          null,
-         ""
+         "Errur durant la registraziun"
       ],
-      "add" : [
+      "Resetting Password": [
          null,
-         ""
+         "Redefinir il pled-clav"
       ],
-      "To continue, please close the window and enter a valid address." : [
+      "Remove Email Address from Account": [
          null,
-         ""
+         "Allontanar l'adressa dad e-mail dal conto"
       ],
-      "Enter your email address to sign in to <strong>%s</strong>" : [
+      "Setting Password": [
          null,
-         ""
+         "Definir il pled-clav"
       ],
-      "Establishing Relay" : [
+      "Signin Failed": [
          null,
-         ""
+         "Errur cun s'annunziar"
       ],
-      "Signin Failed" : [
+      "Signup Failed": [
          null,
-         ""
+         "Errur cun registrar"
       ],
-      "Verify" : [
+      "Syncing Address": [
          null,
-         ""
+         "Sincronisar l'adressa"
       ],
-      "sign in" : [
+      "Syncing Email Addresses": [
          null,
-         ""
+         "Sincronisar las adressas dad e-mail"
       ],
-      "The account cannot be logged in with this username and password." : [
+      "Updating password": [
          null,
-         ""
+         "Actualisar il pled-clav"
       ],
-      "Welcome to BrowserID!" : [
+      "Verifying email address": [
          null,
-         ""
+         "Verifitgar l'adressa dad e-mail"
       ],
-      "If this is a mistake, just ignore the sent email and <a href=\"#\" class=\"cancelVerify\" id=\"back\">use another email address</a>." : [
+      "Cancel": [
          null,
-         ""
+         "Interrumper"
       ],
-      "*%s* is not a valid email address!" : [
+      "#~ \"We just sent an email to that address!  If you really want to send \"#~ \"another, wait a minute or two and try again.\"": [
          null,
-         ""
+         "#~ \"Nus avain gist tramess in e-mail a questa adressa. Sche ti vuls propi \"#~ \"trametter anc in, spetga ina minuta u duas ed emprova danovamain.\""
       ],
-      "Please wait a few seconds while we sign you into the site." : [
+      "translated text": [
          null,
-         ""
+         "text translatà"
       ]
    }
 }
